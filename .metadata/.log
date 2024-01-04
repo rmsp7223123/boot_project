@@ -1,0 +1,1393 @@
+!SESSION 2024-01-04 14:24:05.614 -----------------------------------------------
+eclipse.buildId=4.14.0.202203131612
+java.version=17.0.2
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4 -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4 -data D:\boot_project -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY org.eclipse.jface 2 0 2024-01-04 14:24:08.871
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2024-01-04 14:24:08.871
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@43201f84,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2c51c756,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2024-01-04 14:24:08.871
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4ef277ef,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1ddc889b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-01-04 14:24:11.952
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\rmsp7'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.ui 2 2 2024-01-04 14:35:17.204
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+
+!ENTRY org.eclipse.jface 2 0 2024-01-04 14:35:24.992
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2024-01-04 14:35:24.992
+!MESSAGE A conflict occurred for CTRL+D:
+Binding(CTRL+D,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.text.delete.line,Delete Line,
+		Delete a line of text,
+		Category(org.eclipse.ui.category.textEditor,Text Editing,Text Editing Commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@54d8774c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+Binding(CTRL+D,
+	ParameterizedCommand(Command(io.emmet.eclipse.commands.match_pair_outward,Match Pair Outward,
+		,
+		Category(io.emmet.eclipse.commands.category,Emmet,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@ca160e0,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:36:10.782
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:36:10.783
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:36:10.783
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:36:10.783
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:36:10.788
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:36:10.789
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:36:10.790
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:36:10.791
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:36:10.916
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:36:10.922
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-01-04 14:36:20.785
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-01-04 14:36:20.786
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@2152797[org.springframework.tooling.boot.ls:1.32.0.202203131529(id=569)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-01-04 14:36:20.788
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-01-04 14:36:20.817
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.eclipse.jface 2 0 2024-01-04 14:36:20.914
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2024-01-04 14:36:20.914
+!MESSAGE A conflict occurred for CTRL+SHIFT+C:
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.eclipse.tm4e.languageconfiguration.togglelinecommentcommand,Toggle Line Comment,
+		,
+		Category(org.eclipse.tm4e.languageconfiguration.category,TM4E Language Configuration,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@75b05370,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.springframework.tooling.boot.ls.ToggleComment,Toggle Comment,
+		,
+		Category(org.springframework.ide.eclipse.commands,Spring Generic Text Editor,Spring Language Server Commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3186d842,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2024-01-04 14:36:20.914
+!MESSAGE A conflict occurred for CTRL+SHIFT+/:
+Binding(CTRL+SHIFT+/,
+	ParameterizedCommand(Command(org.eclipse.tm4e.languageconfiguration.addblockcommentcommand,Add Block Comment,
+		,
+		Category(org.eclipse.tm4e.languageconfiguration.category,TM4E Language Configuration,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@31b7d7d0,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+Binding(CTRL+SHIFT+/,
+	ParameterizedCommand(Command(io.emmet.eclipse.commands.toggle_comment,Toggle Comment,
+		,
+		Category(io.emmet.eclipse.commands.category,Emmet,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6bcefcef,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:36:22.143
+!MESSAGE TimeoutException
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.eclipse.lsp4e.operations.completion.LSContentAssistProcessor.getCompletionProposalAutoActivationCharacters(LSContentAssistProcessor.java:261)
+	at org.eclipse.jface.text.contentassist.IContentAssistProcessorExtension$1.isCompletionProposalAutoActivation(IContentAssistProcessorExtension.java:115)
+	at org.eclipse.jface.text.contentassist.ContentAssistant.getAutoActivationTriggerType(ContentAssistant.java:1233)
+	at org.eclipse.jface.text.contentassist.ContentAssistant$AutoAssistListener.keyPressed(ContentAssistant.java:345)
+	at org.eclipse.jface.text.contentassist.ContentAssistant$AutoAssistListener.verifyKey(ContentAssistant.java:374)
+	at org.eclipse.jface.text.TextViewer$VerifyKeyListenersManager.verifyKey(TextViewer.java:480)
+	at org.eclipse.swt.custom.StyledTextListener.handleEvent(StyledTextListener.java:70)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1063)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1087)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1072)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:775)
+	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:6248)
+	at org.eclipse.swt.custom.StyledText.lambda$28(StyledText.java:5932)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1063)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1087)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1072)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1114)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1110)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1539)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4868)
+	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:345)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4746)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5015)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3630)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:36:22.196
+!MESSAGE TimeoutException
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.eclipse.lsp4e.operations.completion.LSContentAssistProcessor.getContextInformationAutoActivationCharacters(LSContentAssistProcessor.java:300)
+	at org.eclipse.jface.text.contentassist.IContentAssistProcessorExtension$1.isContextInformationAutoActivation(IContentAssistProcessorExtension.java:128)
+	at org.eclipse.jface.text.contentassist.ContentAssistant.getAutoActivationTriggerType(ContentAssistant.java:1236)
+	at org.eclipse.jface.text.contentassist.ContentAssistant$AutoAssistListener.keyPressed(ContentAssistant.java:345)
+	at org.eclipse.jface.text.contentassist.ContentAssistant$AutoAssistListener.verifyKey(ContentAssistant.java:374)
+	at org.eclipse.jface.text.TextViewer$VerifyKeyListenersManager.verifyKey(TextViewer.java:480)
+	at org.eclipse.swt.custom.StyledTextListener.handleEvent(StyledTextListener.java:70)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1063)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1087)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1072)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:775)
+	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:6248)
+	at org.eclipse.swt.custom.StyledText.lambda$28(StyledText.java:5932)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1063)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1087)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1072)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1114)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1110)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1539)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4868)
+	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:345)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4746)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5015)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3630)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:36:22.258
+!MESSAGE TimeoutException
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.eclipse.lsp4e.operations.completion.LSContentAssistProcessor.getCompletionProposalAutoActivationCharacters(LSContentAssistProcessor.java:261)
+	at org.eclipse.jface.text.contentassist.IContentAssistProcessorExtension$1.isCompletionProposalAutoActivation(IContentAssistProcessorExtension.java:115)
+	at org.eclipse.jface.text.contentassist.ContentAssistant.getAutoActivationTriggerType(ContentAssistant.java:1233)
+	at org.eclipse.jface.text.contentassist.ContentAssistant$AutoAssistListener.keyPressed(ContentAssistant.java:345)
+	at org.eclipse.jface.text.contentassist.ContentAssistant$AutoAssistListener.verifyKey(ContentAssistant.java:374)
+	at org.eclipse.jface.text.TextViewer$VerifyKeyListenersManager.verifyKey(TextViewer.java:480)
+	at org.eclipse.swt.custom.StyledTextListener.handleEvent(StyledTextListener.java:70)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1063)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1087)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1072)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:775)
+	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:6248)
+	at org.eclipse.swt.custom.StyledText.lambda$28(StyledText.java:5932)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1063)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1087)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1072)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1114)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1110)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1539)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4868)
+	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:345)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4746)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5015)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3630)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:36:22.309
+!MESSAGE TimeoutException
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.eclipse.lsp4e.operations.completion.LSContentAssistProcessor.getContextInformationAutoActivationCharacters(LSContentAssistProcessor.java:300)
+	at org.eclipse.jface.text.contentassist.IContentAssistProcessorExtension$1.isContextInformationAutoActivation(IContentAssistProcessorExtension.java:128)
+	at org.eclipse.jface.text.contentassist.ContentAssistant.getAutoActivationTriggerType(ContentAssistant.java:1236)
+	at org.eclipse.jface.text.contentassist.ContentAssistant$AutoAssistListener.keyPressed(ContentAssistant.java:345)
+	at org.eclipse.jface.text.contentassist.ContentAssistant$AutoAssistListener.verifyKey(ContentAssistant.java:374)
+	at org.eclipse.jface.text.TextViewer$VerifyKeyListenersManager.verifyKey(TextViewer.java:480)
+	at org.eclipse.swt.custom.StyledTextListener.handleEvent(StyledTextListener.java:70)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1063)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1087)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1072)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:775)
+	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:6248)
+	at org.eclipse.swt.custom.StyledText.lambda$28(StyledText.java:5932)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1063)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1087)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1072)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1114)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1110)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1539)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4868)
+	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:345)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4746)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5015)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3630)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:36:22.365
+!MESSAGE TimeoutException
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.eclipse.lsp4e.operations.completion.LSContentAssistProcessor.getCompletionProposalAutoActivationCharacters(LSContentAssistProcessor.java:261)
+	at org.eclipse.jface.text.contentassist.IContentAssistProcessorExtension$1.isCompletionProposalAutoActivation(IContentAssistProcessorExtension.java:115)
+	at org.eclipse.jface.text.contentassist.ContentAssistant.getAutoActivationTriggerType(ContentAssistant.java:1233)
+	at org.eclipse.jface.text.contentassist.ContentAssistant$AutoAssistListener.keyPressed(ContentAssistant.java:345)
+	at org.eclipse.jface.text.contentassist.ContentAssistant$AutoAssistListener.verifyKey(ContentAssistant.java:374)
+	at org.eclipse.jface.text.TextViewer$VerifyKeyListenersManager.verifyKey(TextViewer.java:480)
+	at org.eclipse.swt.custom.StyledTextListener.handleEvent(StyledTextListener.java:70)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1063)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1087)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1072)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:775)
+	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:6248)
+	at org.eclipse.swt.custom.StyledText.lambda$28(StyledText.java:5932)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1063)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1087)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1072)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1114)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1110)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1539)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4868)
+	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:345)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4746)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5015)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3630)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:36:22.418
+!MESSAGE TimeoutException
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.eclipse.lsp4e.operations.completion.LSContentAssistProcessor.getContextInformationAutoActivationCharacters(LSContentAssistProcessor.java:300)
+	at org.eclipse.jface.text.contentassist.IContentAssistProcessorExtension$1.isContextInformationAutoActivation(IContentAssistProcessorExtension.java:128)
+	at org.eclipse.jface.text.contentassist.ContentAssistant.getAutoActivationTriggerType(ContentAssistant.java:1236)
+	at org.eclipse.jface.text.contentassist.ContentAssistant$AutoAssistListener.keyPressed(ContentAssistant.java:345)
+	at org.eclipse.jface.text.contentassist.ContentAssistant$AutoAssistListener.verifyKey(ContentAssistant.java:374)
+	at org.eclipse.jface.text.TextViewer$VerifyKeyListenersManager.verifyKey(TextViewer.java:480)
+	at org.eclipse.swt.custom.StyledTextListener.handleEvent(StyledTextListener.java:70)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1063)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1087)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1072)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:775)
+	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:6248)
+	at org.eclipse.swt.custom.StyledText.lambda$28(StyledText.java:5932)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1063)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1087)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1072)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1114)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1110)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1539)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4868)
+	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:345)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4746)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5015)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3630)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:36:22.661
+!MESSAGE TimeoutException
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.eclipse.lsp4e.operations.completion.LSContentAssistProcessor.getCompletionProposalAutoActivationCharacters(LSContentAssistProcessor.java:261)
+	at org.eclipse.jface.text.contentassist.IContentAssistProcessorExtension$1.isCompletionProposalAutoActivation(IContentAssistProcessorExtension.java:115)
+	at org.eclipse.jface.text.contentassist.ContentAssistant.getAutoActivationTriggerType(ContentAssistant.java:1233)
+	at org.eclipse.jface.text.contentassist.ContentAssistant$AutoAssistListener.keyPressed(ContentAssistant.java:345)
+	at org.eclipse.jface.text.contentassist.ContentAssistant$AutoAssistListener.verifyKey(ContentAssistant.java:374)
+	at org.eclipse.jface.text.TextViewer$VerifyKeyListenersManager.verifyKey(TextViewer.java:480)
+	at org.eclipse.swt.custom.StyledTextListener.handleEvent(StyledTextListener.java:70)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1063)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1087)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1072)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:775)
+	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:6248)
+	at org.eclipse.swt.custom.StyledText.lambda$28(StyledText.java:5932)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1063)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1087)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1072)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1114)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1110)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1539)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4868)
+	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:345)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4746)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5015)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3630)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:36:22.713
+!MESSAGE TimeoutException
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.eclipse.lsp4e.operations.completion.LSContentAssistProcessor.getContextInformationAutoActivationCharacters(LSContentAssistProcessor.java:300)
+	at org.eclipse.jface.text.contentassist.IContentAssistProcessorExtension$1.isContextInformationAutoActivation(IContentAssistProcessorExtension.java:128)
+	at org.eclipse.jface.text.contentassist.ContentAssistant.getAutoActivationTriggerType(ContentAssistant.java:1236)
+	at org.eclipse.jface.text.contentassist.ContentAssistant$AutoAssistListener.keyPressed(ContentAssistant.java:345)
+	at org.eclipse.jface.text.contentassist.ContentAssistant$AutoAssistListener.verifyKey(ContentAssistant.java:374)
+	at org.eclipse.jface.text.TextViewer$VerifyKeyListenersManager.verifyKey(TextViewer.java:480)
+	at org.eclipse.swt.custom.StyledTextListener.handleEvent(StyledTextListener.java:70)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1063)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1087)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1072)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:775)
+	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:6248)
+	at org.eclipse.swt.custom.StyledText.lambda$28(StyledText.java:5932)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1063)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1087)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1072)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1114)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1110)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1539)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4868)
+	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:345)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4746)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5015)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3630)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:36:22.806
+!MESSAGE TimeoutException
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.eclipse.lsp4e.operations.completion.LSContentAssistProcessor.getCompletionProposalAutoActivationCharacters(LSContentAssistProcessor.java:261)
+	at org.eclipse.jface.text.contentassist.IContentAssistProcessorExtension$1.isCompletionProposalAutoActivation(IContentAssistProcessorExtension.java:115)
+	at org.eclipse.jface.text.contentassist.ContentAssistant.getAutoActivationTriggerType(ContentAssistant.java:1233)
+	at org.eclipse.jface.text.contentassist.ContentAssistant$AutoAssistListener.keyPressed(ContentAssistant.java:345)
+	at org.eclipse.jface.text.contentassist.ContentAssistant$AutoAssistListener.verifyKey(ContentAssistant.java:374)
+	at org.eclipse.jface.text.TextViewer$VerifyKeyListenersManager.verifyKey(TextViewer.java:480)
+	at org.eclipse.swt.custom.StyledTextListener.handleEvent(StyledTextListener.java:70)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1063)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1087)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1072)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:775)
+	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:6248)
+	at org.eclipse.swt.custom.StyledText.lambda$28(StyledText.java:5932)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1063)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1087)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1072)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1114)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1110)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1539)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4868)
+	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:345)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4746)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5015)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3630)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:36:22.857
+!MESSAGE TimeoutException
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.eclipse.lsp4e.operations.completion.LSContentAssistProcessor.getContextInformationAutoActivationCharacters(LSContentAssistProcessor.java:300)
+	at org.eclipse.jface.text.contentassist.IContentAssistProcessorExtension$1.isContextInformationAutoActivation(IContentAssistProcessorExtension.java:128)
+	at org.eclipse.jface.text.contentassist.ContentAssistant.getAutoActivationTriggerType(ContentAssistant.java:1236)
+	at org.eclipse.jface.text.contentassist.ContentAssistant$AutoAssistListener.keyPressed(ContentAssistant.java:345)
+	at org.eclipse.jface.text.contentassist.ContentAssistant$AutoAssistListener.verifyKey(ContentAssistant.java:374)
+	at org.eclipse.jface.text.TextViewer$VerifyKeyListenersManager.verifyKey(TextViewer.java:480)
+	at org.eclipse.swt.custom.StyledTextListener.handleEvent(StyledTextListener.java:70)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1063)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1087)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1072)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:775)
+	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:6248)
+	at org.eclipse.swt.custom.StyledText.lambda$28(StyledText.java:5932)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1063)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1087)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1072)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1114)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1110)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1539)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4868)
+	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:345)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4746)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5015)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3630)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-01-04 14:36:22.866
+!MESSAGE Boot LS startup time from start to initialized: 2075ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-01-04 14:36:22.947
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.flCfYncSisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-01-04 14:36:22.949
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-01-04 14:36:22.950
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-01-04 14:36:22.951
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-01-04 14:36:22.951
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-01-04 14:36:22.951
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.flCfYncS => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-01-04 14:36:22.960
+!MESSAGE classpath=94 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-01-04 14:36:22.972
+!MESSAGE buffering callback sts4.classpath.flCfYncS project false 94
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-01-04 14:36:22.972
+!MESSAGE executing callback sts4.classpath.flCfYncS 1 batched events
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:36:23.051
+!MESSAGE BadLocationException
+!STACK 0
+org.eclipse.jface.text.BadLocationException
+	at org.eclipse.jface.text.TreeLineTracker.fail(TreeLineTracker.java:1054)
+	at org.eclipse.jface.text.TreeLineTracker.getLineInformation(TreeLineTracker.java:1163)
+	at org.eclipse.jface.text.AbstractLineTracker.getLineInformation(AbstractLineTracker.java:137)
+	at org.eclipse.jface.text.AbstractDocument.getLineInformation(AbstractDocument.java:882)
+	at org.eclipse.core.internal.filebuffers.SynchronizableDocument.getLineInformation(SynchronizableDocument.java:290)
+	at org.eclipse.lsp4e.LSPEclipseUtils.toOffset(LSPEclipseUtils.java:161)
+	at org.eclipse.lsp4e.operations.diagnostics.LSPDiagnosticsToMarkers.computeMarkerAttributes(LSPDiagnosticsToMarkers.java:215)
+	at org.eclipse.lsp4e.operations.diagnostics.LSPDiagnosticsToMarkers.lambda$10(LSPDiagnosticsToMarkers.java:150)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2315)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2335)
+	at org.eclipse.lsp4e.operations.diagnostics.LSPDiagnosticsToMarkers.updateMarkers(LSPDiagnosticsToMarkers.java:170)
+	at org.eclipse.lsp4e.operations.diagnostics.LSPDiagnosticsToMarkers.accept(LSPDiagnosticsToMarkers.java:88)
+	at org.eclipse.lsp4e.operations.diagnostics.LSPDiagnosticsToMarkers.accept(LSPDiagnosticsToMarkers.java:1)
+	at org.eclipse.lsp4e.LanguageClientImpl.publishDiagnostics(LanguageClientImpl.java:78)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$4(LanguageServerWrapper.java:260)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-01-04 14:36:23.304
+!MESSAGE executing callback sts4.classpath.flCfYncS SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2024-01-04 14:36:25.259
+!MESSAGE Cannot invoke "String.length()" because "typeSignature" is null
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "String.length()" because "typeSignature" is null
+	at org.eclipse.jdt.internal.compiler.parser.TypeConverter.createTypeReference(TypeConverter.java:145)
+	at org.eclipse.jdt.internal.core.BinaryTypeConverter.createTypeReference(BinaryTypeConverter.java:366)
+	at org.eclipse.jdt.internal.core.BinaryTypeConverter.convert(BinaryTypeConverter.java:214)
+	at org.eclipse.jdt.internal.core.BinaryTypeConverter.convert(BinaryTypeConverter.java:330)
+	at org.eclipse.jdt.internal.core.BinaryTypeConverter.buildTypeDeclaration(BinaryTypeConverter.java:111)
+	at org.eclipse.jdt.internal.codeassist.SelectionEngine.selectType(SelectionEngine.java:1648)
+	at org.eclipse.jdt.internal.core.NamedMember.resolveType(NamedMember.java:328)
+	at org.eclipse.jdt.internal.core.NamedMember.resolveType(NamedMember.java:270)
+	at org.springframework.tooling.jdt.ls.commons.java.JavaData.resolveFQName(JavaData.java:523)
+	at org.springframework.tooling.jdt.ls.commons.java.JavaData.fillAnnotationData(JavaData.java:371)
+	at org.springframework.tooling.jdt.ls.commons.java.JavaData.createAnnotationData(JavaData.java:362)
+	at org.springframework.tooling.jdt.ls.commons.java.JavaData.createMethodData(JavaData.java:250)
+	at org.springframework.tooling.jdt.ls.commons.java.JavaData.fillTypeData(JavaData.java:314)
+	at org.springframework.tooling.jdt.ls.commons.java.JavaData.createTypeData(JavaData.java:276)
+	at org.springframework.tooling.jdt.ls.commons.java.JavaData.typeData(JavaData.java:69)
+	at org.springframework.tooling.ls.eclipse.commons.STS4LanguageClientImpl.lambda$16(STS4LanguageClientImpl.java:498)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1760)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1182)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165)
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:38:43.715
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:38:43.715
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:38:43.716
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:38:43.717
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:38:43.772
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:38:43.772
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:38:43.774
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:38:43.775
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:38:43.821
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:38:43.821
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:38:43.822
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:38:44.244
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:38:48.890
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:38:48.891
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:38:48.925
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:38:48.926
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:38:48.937
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:38:48.937
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:38:48.938
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:38:48.938
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:38:48.952
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:38:48.952
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:38:48.952
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:38:48.955
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:38:48.977
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:38:48.978
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:38:48.979
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:38:48.980
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:38:48.986
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:38:48.986
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:38:48.987
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.wst.xml.core 4 4 2024-01-04 14:43:54.607
+!MESSAGE IStructuredDocumentRegion management failed.
+!STACK 0
+org.eclipse.wst.xml.core.internal.document.StructuredDocumentRegionManagementException: IStructuredDocumentRegion management failed.
+	at org.eclipse.wst.xml.core.internal.document.XMLModelParser.removeStructuredDocumentRegion(XMLModelParser.java:2224)
+	at org.eclipse.wst.xml.core.internal.document.XMLModelParser.replaceStructuredDocumentRegions(XMLModelParser.java:2341)
+	at org.eclipse.wst.xml.core.internal.document.DOMModelImpl.nodesReplaced(DOMModelImpl.java:742)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument._fireEvent(BasicStructuredDocument.java:602)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.fireStructuredDocumentEvent(BasicStructuredDocument.java:1200)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.internalReplaceText(BasicStructuredDocument.java:1981)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.replaceText(BasicStructuredDocument.java:2425)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.replaceText(BasicStructuredDocument.java:2410)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument.access$2(JobSafeStructuredDocument.java:1)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument$3.run(JobSafeStructuredDocument.java:143)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.wst.sse.ui.EditorExecutionContext.execute(EditorExecutionContext.java:150)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument.replaceText(JobSafeStructuredDocument.java:146)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.replace(BasicStructuredDocument.java:2370)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument.access$0(JobSafeStructuredDocument.java:1)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument$1.run(JobSafeStructuredDocument.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.wst.sse.ui.EditorExecutionContext.execute(EditorExecutionContext.java:150)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument.replace(JobSafeStructuredDocument.java:108)
+	at org.eclipse.jface.text.projection.ProjectionTextStore.replace(ProjectionTextStore.java:106)
+	at org.eclipse.jface.text.AbstractDocument.replace(AbstractDocument.java:1093)
+	at org.eclipse.jface.text.AbstractDocument.replace(AbstractDocument.java:1118)
+	at org.eclipse.jface.text.projection.ProjectionDocument.replace(ProjectionDocument.java:627)
+	at org.eclipse.jface.text.DefaultDocumentAdapter.replaceTextRange(DefaultDocumentAdapter.java:223)
+	at org.eclipse.swt.custom.StyledText.modifyContent(StyledText.java:7639)
+	at org.eclipse.swt.custom.StyledText.sendKeyEvent(StyledText.java:8539)
+	at org.eclipse.swt.custom.StyledText.doBackspace(StyledText.java:2312)
+	at org.eclipse.swt.custom.StyledText.invokeAction(StyledText.java:7428)
+	at org.eclipse.swt.custom.StyledText.handleKey(StyledText.java:6226)
+	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:6253)
+	at org.eclipse.swt.custom.StyledText.lambda$28(StyledText.java:5932)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1063)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1087)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1072)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1114)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1110)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1539)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4868)
+	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:345)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4746)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5015)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3630)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.wst.xml.core 4 4 2024-01-04 14:43:59.504
+!MESSAGE IStructuredDocumentRegion management failed.
+!STACK 0
+org.eclipse.wst.xml.core.internal.document.StructuredDocumentRegionManagementException: IStructuredDocumentRegion management failed.
+	at org.eclipse.wst.xml.core.internal.document.XMLModelParser.removeStructuredDocumentRegion(XMLModelParser.java:2224)
+	at org.eclipse.wst.xml.core.internal.document.XMLModelParser.replaceStructuredDocumentRegions(XMLModelParser.java:2341)
+	at org.eclipse.wst.xml.core.internal.document.DOMModelImpl.nodesReplaced(DOMModelImpl.java:742)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument._fireEvent(BasicStructuredDocument.java:602)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.fireStructuredDocumentEvent(BasicStructuredDocument.java:1200)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.internalReplaceText(BasicStructuredDocument.java:1981)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.replaceText(BasicStructuredDocument.java:2425)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.replaceText(BasicStructuredDocument.java:2410)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument.access$2(JobSafeStructuredDocument.java:1)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument$3.run(JobSafeStructuredDocument.java:143)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.wst.sse.ui.EditorExecutionContext.execute(EditorExecutionContext.java:150)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument.replaceText(JobSafeStructuredDocument.java:146)
+	at org.eclipse.wst.html.core.internal.format.HTMLFormatter.replaceSource(HTMLFormatter.java:646)
+	at org.eclipse.wst.html.core.internal.format.HTMLTextFormatter.formatText(HTMLTextFormatter.java:301)
+	at org.eclipse.wst.html.core.internal.format.HTMLTextFormatter.formatNode(HTMLTextFormatter.java:124)
+	at org.eclipse.wst.html.core.internal.format.HTMLFormatter.formatChildNodes(HTMLFormatter.java:369)
+	at org.eclipse.wst.html.core.internal.format.HTMLElementFormatter.formatNode(HTMLElementFormatter.java:127)
+	at org.eclipse.wst.html.core.internal.format.HTMLFormatter.formatChildNodes(HTMLFormatter.java:369)
+	at org.eclipse.wst.html.core.internal.format.HTMLElementFormatter.formatNode(HTMLElementFormatter.java:127)
+	at org.eclipse.wst.html.core.internal.format.HTMLFormatter.format(HTMLFormatter.java:330)
+	at org.eclipse.wst.html.core.internal.format.HTMLFormatter.format(HTMLFormatter.java:316)
+	at org.eclipse.wst.sse.core.internal.format.AbstractStructuredFormatProcessor.formatNode(AbstractStructuredFormatProcessor.java:414)
+	at org.eclipse.wst.sse.core.internal.format.AbstractStructuredFormatProcessor.formatModel(AbstractStructuredFormatProcessor.java:355)
+	at org.eclipse.wst.sse.core.internal.format.AbstractStructuredFormatProcessor.formatDocument(AbstractStructuredFormatProcessor.java:175)
+	at org.eclipse.wst.sse.ui.internal.format.StructuredFormattingStrategy.format(StructuredFormattingStrategy.java:60)
+	at org.eclipse.jface.text.formatter.MultiPassContentFormatter.formatMaster(MultiPassContentFormatter.java:197)
+	at org.eclipse.wst.sse.ui.StructuredTextMultiPassContentFormatter.formatMaster(StructuredTextMultiPassContentFormatter.java:58)
+	at org.eclipse.jface.text.formatter.MultiPassContentFormatter.format(MultiPassContentFormatter.java:143)
+	at org.eclipse.wst.sse.ui.internal.StructuredTextViewer.doOperation(StructuredTextViewer.java:564)
+	at org.eclipse.ui.texteditor.TextOperationAction.lambda$0(TextOperationAction.java:130)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:74)
+	at org.eclipse.ui.texteditor.TextOperationAction.run(TextOperationAction.java:130)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:474)
+	at org.eclipse.jface.commands.ActionHandler.execute(ActionHandler.java:121)
+	at org.eclipse.ui.internal.handlers.E4HandlerProxy.execute(E4HandlerProxy.java:97)
+	at jdk.internal.reflect.GeneratedMethodAccessor86.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:317)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:251)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:173)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:156)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:488)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:487)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:213)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.executeCommand(KeyBindingDispatcher.java:308)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.press(KeyBindingDispatcher.java:580)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.processKeyEvent(KeyBindingDispatcher.java:647)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.filterKeySequenceBindings(KeyBindingDispatcher.java:439)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher$KeyDownFilter.handleEvent(KeyBindingDispatcher.java:96)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1280)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1062)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1087)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1072)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1114)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1110)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1539)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4868)
+	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:345)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4746)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5015)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3630)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:45:30.273
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:45:30.274
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:45:30.274
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:45:30.275
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:45:30.297
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:45:30.297
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:45:30.298
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:45:30.298
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:45:30.301
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:45:30.302
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:45:30.302
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:45:30.303
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:45:30.319
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:45:30.320
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-01-04 14:50:41.557
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.flCfYncS
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-01-04 14:50:41.558
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.flCfYncS
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-01-04 14:50:41.558
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-01-04 14:50:41.558
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.flCfYncS => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-01-04 14:50:42.169
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-01-04 14:50:42.169
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@2152797[org.springframework.tooling.boot.ls:1.32.0.202203131529(id=569)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-01-04 14:50:42.170
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-01-04 14:50:43.825
+!MESSAGE Boot LS startup time from start to initialized: 1655ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-01-04 14:50:43.889
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.tDLsEcFYisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-01-04 14:50:43.889
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-01-04 14:50:43.889
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-01-04 14:50:43.889
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-01-04 14:50:43.889
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-01-04 14:50:43.890
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.tDLsEcFY => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-01-04 14:50:43.901
+!MESSAGE classpath=94 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-01-04 14:50:43.905
+!MESSAGE buffering callback sts4.classpath.tDLsEcFY project false 94
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-01-04 14:50:43.905
+!MESSAGE executing callback sts4.classpath.tDLsEcFY 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-01-04 14:50:44.165
+!MESSAGE executing callback sts4.classpath.tDLsEcFY SUCCESS [done]
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:51:52.352
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:51:52.352
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:51:52.358
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:51:52.359
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:51:52.400
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:51:52.400
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:51:52.403
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:51:52.403
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:51:52.418
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:51:52.418
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:51:52.419
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:51:52.420
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:51:52.445
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:51:52.447
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:51:52.458
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:51:52.467
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:51:52.538
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:51:52.538
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:51:52.539
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:51:52.540
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:51:52.552
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:52:13.798
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:52:13.800
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:52:13.801
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:52:13.804
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:52:13.821
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:52:13.823
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:52:13.824
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:52:13.826
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:52:13.907
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:52:13.908
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:52:13.908
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:52:13.909
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:52:13.975
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:52:13.976
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:52:13.976
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:52:13.977
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:52:54.335
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:52:54.336
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:52:54.336
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:52:54.337
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:52:54.364
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:52:54.364
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:52:54.365
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:52:54.366
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:52:54.402
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:52:54.403
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:52:54.403
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:52:54.405
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:52:54.441
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:52:54.450
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:52:54.450
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:54:05.118
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:54:05.119
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:54:05.119
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:54:05.120
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:54:05.134
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:54:05.134
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:54:05.135
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:54:05.135
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:54:05.140
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:54:05.140
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:54:05.141
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:54:05.141
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:54:05.160
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:54:05.161
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:54:05.161
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-04 14:54:05.161
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
