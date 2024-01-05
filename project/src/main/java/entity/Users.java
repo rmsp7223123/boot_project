@@ -19,12 +19,14 @@ public class Users {
 
 	@Id // pk
 	@GeneratedValue(strategy = GenerationType.IDENTITY) // 기본 키의 값을 자동으로 생성, 기본 키 값을 자동 증가
-	private Long id; // 기본 키(primary key)는 유일한 값을 가지고 있어야 하며, 큰 범위의 값을 지원해야함
+	private Long loginId; // 기본 키(primary key)는 유일한 값을 가지고 있어야 하며, 큰 범위의 값을 지원해야함
 						// long 타입은 64비트의 부호 있는 정수로 매우 큰 범위의 값을 표현할 수 있으므로, 고유한 식별자로서 적합
 
 	private String password;
 
 	private String name;
+	
+	private String nickname;
 
 	private String gender;
 
