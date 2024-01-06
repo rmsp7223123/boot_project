@@ -14,7 +14,7 @@ import repository.UsersRepository;
 @RequestMapping("/users")
 public class UsersController {
 
-	private final UsersRepository userRepository;
+	// private final UsersRepository userRepository;
 
 	@PostMapping("/login")
 	public String doLogin() {// 로그인
