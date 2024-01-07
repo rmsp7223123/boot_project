@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head lang="ko">
-<th:block layout:fragment="headerTemplate">
-	<title>Spring Boot</title>
-</th:block>
+<div th:insert="headerTemplate :: headerTemplate"></div>
+<title>타이틀ㅇㄹㄹ</title>
 </head>
 <body class="bg-gradient-primary">
 	<div th:insert="bodyTemplate :: bodyTemplate"></div>
