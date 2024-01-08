@@ -16,9 +16,9 @@ public class UsersController {
 
 	// private final UsersRepository userRepository;
 
-	@PostMapping("/login")
+	@RequestMapping("/login")
 	public String doLogin() {// 로그인
-		return "home";
+		return "index";
 	}
 
 	@GetMapping("/logout")
@@ -33,6 +33,11 @@ public class UsersController {
 
 	@PostMapping("/signup")
 	public String doSignup(Users user) { // 회원가입
+		return "";
+	}
+	
+	@RequestMapping("/home")
+	public String home() {
 		return "";
 	}
 }
