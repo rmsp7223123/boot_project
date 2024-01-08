@@ -5,16 +5,18 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import entity.Users;
+import com.example.demo.entity.Users;
+import com.example.demo.repository.UsersRepository;
+
 import lombok.RequiredArgsConstructor;
-import repository.UsersRepository;
+
 
 @Controller
 @RequiredArgsConstructor
 @RequestMapping("/users")
 public class UsersController {
 
-	// private final UsersRepository userRepository;
+	private final UsersRepository userRepository;
 
 	@RequestMapping("/login")
 	public String doLogin() {// 로그인
@@ -33,7 +35,8 @@ public class UsersController {
 
 	@PostMapping("/signup")
 	public String doSignup(Users user) { // 회원가입
-		return "";
+		userRepository.save(user);
+        return "index";
 	}
 	
 	@RequestMapping("/home")

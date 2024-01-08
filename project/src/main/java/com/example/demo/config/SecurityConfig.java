@@ -1,4 +1,4 @@
-package config;
+package com.example.demo.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -6,8 +6,9 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.web.SecurityFilterChain;
 
-import handler.LoginSuccessHandler;
-import handler.LogoutSuccessHandler;
+import com.example.demo.handler.LoginSuccessHandler;
+import com.example.demo.handler.LogoutSuccessHandler;
+
 import lombok.RequiredArgsConstructor;
 
 @Configuration
@@ -15,7 +16,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class SecurityConfig {
 
-	private final repository.UsersRepository userRepository;
+	private final com.example.demo.repository.UsersRepository userRepository;
 
 	@Bean
 	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
@@ -30,4 +31,5 @@ public class SecurityConfig {
 				// JSESSIONID는 톰캣 같은 서블릿 컨테이너가 세션을 관리하기 위해 사용하는 쿠키 이름
 				.logoutSuccessHandler(new LogoutSuccessHandler()).and().build();
 	}
+	
 }

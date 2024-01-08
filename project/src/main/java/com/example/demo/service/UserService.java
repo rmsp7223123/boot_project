@@ -1,13 +1,14 @@
-package service;
+package com.example.demo.service;
 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 
-import dto.UserJoinRequest;
+import com.example.demo.dto.UserJoinRequest;
+import com.example.demo.repository.UsersRepository;
+
 import lombok.RequiredArgsConstructor;
-import repository.UsersRepository;
 
 @Service
 @RequiredArgsConstructor

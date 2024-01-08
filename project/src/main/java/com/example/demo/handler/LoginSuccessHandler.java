@@ -1,4 +1,4 @@
-package handler;
+package com.example.demo.handler;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -6,13 +6,15 @@ import java.io.PrintWriter;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 
-import entity.Users;
+import com.example.demo.entity.Users;
+import com.example.demo.repository.UsersRepository;
+
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import lombok.AllArgsConstructor;
-import repository.UsersRepository;
+
 
 @AllArgsConstructor
 public class LoginSuccessHandler implements AuthenticationSuccessHandler {

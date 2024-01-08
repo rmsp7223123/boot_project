@@ -1,6 +1,8 @@
-package dto;
+package com.example.demo.dto;
 
-import entity.Users;
+
+import com.example.demo.entity.Users;
+
 import lombok.Data;
 
 @Data

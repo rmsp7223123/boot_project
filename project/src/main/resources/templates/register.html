@@ -16,39 +16,36 @@
 							<div class="text-center">
 								<h1 class="h4 text-gray-900 mb-4">회원가입</h1>
 							</div>
-							<form class="user">
+							<form class="user" th:action="@{/users/signup}" method="post">
 								<div class="form-group row">
 									<div class="col-sm-6 mb-3 mb-sm-0">
 										<input type="text" class="form-control form-control-user"
-											id="exampleFirstName" placeholder="First Name">
+											id="id" placeholder="ID" name="id">
 									</div>
 									<div class="col-sm-6">
 										<input type="text" class="form-control form-control-user"
-											id="age" placeholder="Age">
+											id="age" placeholder="Age" name="age">
 									</div>
-								</div>
-								<div class="form-group">
-									<input type="email" class="form-control form-control-user"
-										id="exampleInputEmail" placeholder="Email Address">
 								</div>
 								<div class="form-group row">
 									<div class="col-sm-6 mb-3 mb-sm-0">
 										<input type="password" class="form-control form-control-user"
-											id="exampleInputPassword" placeholder="Password">
+											id="inputPassword" placeholder="Password" name="password">
 									</div>
 									<div class="col-sm-6">
 										<input type="password" class="form-control form-control-user"
-											id="exampleRepeatPassword" placeholder="Repeat Password">
+											id="repeatPassword" placeholder="Repeat Password"> <span
+											id="message"></span>
 									</div>
 								</div>
 								<div class="form-group row">
 									<div class="col-sm-6 mb-3 mb-sm-0">
 										<input type="text" class="form-control form-control-user"
-											id="name" placeholder="Name">
+											id="name" placeholder="Name" name="name">
 									</div>
 									<div class="col-sm-6">
 										<input type="text" class="form-control form-control-user"
-											id="nickname" placeholder="Nickname">
+											id="nickname" placeholder="Nickname" name="nickname">
 									</div>
 								</div>
 								<div class="form-group row">
@@ -75,7 +72,7 @@
 									Password?</a>
 							</div>
 							<div class="text-center">
-								<a class="small" th:href="@{/users/login}">Already have an
+								<a class="small" th:href="@{/}">Already have an
 									account? Login!</a>
 							</div>
 						</div>
@@ -85,5 +82,26 @@
 		</div>
 
 	</div>
+
+	<script>
+		var pw = document.getElementById("inputPassword");
+		var pwCheck = document.getElementById("repeatPassword");
+		var message = document.getElementById("message");
+
+		pw.onkeyup = validatePassword;
+		pwCheck.onkeyup = validatePassword;
+
+		function validatePassword() {
+			if (pw.value == "" && pwCheck.value == "") {
+				message.innerHTML = "";
+			} else if (pw.value == pwCheck.value) {
+				message.innerHTML = "비밀번호가 일치합니다.";
+				message.style.color = "green";
+			} else {
+				message.innerHTML = "비밀번호가 일치하지 않습니다.";
+				message.style.color = "red";
+			}
+		}
+	</script>
 </body>
 </html>
