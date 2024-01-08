@@ -20,32 +20,34 @@
 								<div class="form-group row">
 									<div class="col-sm-6 mb-3 mb-sm-0">
 										<input type="text" class="form-control form-control-user"
-											id="id" placeholder="ID" name="id">
+											id="id" placeholder="ID" name="아이디를 입력해주세요(최대 10자)"
+											maxlength="10">
 									</div>
 									<div class="col-sm-6">
-										<input type="text" class="form-control form-control-user"
-											id="age" placeholder="Age" name="age">
+										<input type="number" class="form-control form-control-user"
+											id="age" placeholder="Age" name="age" min="1" max="100">
 									</div>
 								</div>
 								<div class="form-group row">
 									<div class="col-sm-6 mb-3 mb-sm-0">
 										<input type="password" class="form-control form-control-user"
-											id="inputPassword" placeholder="Password" name="password">
+											id="inputPassword" placeholder="비밀번호를 입력해주세요(최대 10자)"
+											name="password" maxlength="10">
 									</div>
 									<div class="col-sm-6">
 										<input type="password" class="form-control form-control-user"
-											id="repeatPassword" placeholder="Repeat Password"> <span
-											id="message"></span>
+											id="repeatPassword" placeholder="비밀번호를 재입력해주세요"
+											maxlength="10"> <span id="message"></span>
 									</div>
 								</div>
 								<div class="form-group row">
 									<div class="col-sm-6 mb-3 mb-sm-0">
 										<input type="text" class="form-control form-control-user"
-											id="name" placeholder="Name" name="name">
+											id="name" placeholder="이름" name="name">
 									</div>
 									<div class="col-sm-6">
 										<input type="text" class="form-control form-control-user"
-											id="nickname" placeholder="Nickname" name="nickname">
+											id="nickname" placeholder="닉네임" name="nickname">
 									</div>
 								</div>
 								<div class="form-group row">
@@ -62,18 +64,14 @@
 										</div>
 									</div>
 								</div>
-								<a th:href="@{/users/singup}"
-									class="btn btn-primary btn-user btn-block"> Register
-									Account </a>
+								<button type="submit" class="btn btn-primary btn-user btn-block">회원가입</button>
 							</form>
 							<hr>
 							<div class="text-center">
-								<a class="small" href="forgot-password.html">Forgot
-									Password?</a>
+								<a class="small" href="forgot-password.html">비밀번호를 잊어버리셨나요?</a>
 							</div>
 							<div class="text-center">
-								<a class="small" th:href="@{/}">Already have an
-									account? Login!</a>
+								<a class="small" th:href="@{/}">로그인 화면으로 이동</a>
 							</div>
 						</div>
 					</div>
@@ -102,6 +100,28 @@
 				message.style.color = "red";
 			}
 		}
+
+		document.querySelector('.user').addEventListener(
+				'submit',
+				function(e) {
+					var id = document.getElementById('id').value;
+					var age = document.getElementById('age').value;
+					var name = document.getElementById('name').value;
+					var nickname = document.getElementById('nickname').value;
+					var inputPassword = document.getElementById('inputPassword').value;
+				    var repeatPassword = document.getElementById('repeatPassword').value;
+					if (!id || !age || !inputPassword || !repeatPassword
+							|| !name || !nickname) {
+						alert('모든 필드를 채워주세요.');
+						e.preventDefault();
+					} else if(age <= 0 || age > 100){
+						alert('나이에 0이하의 값이나 100이상의 값은 입력할 수 없습니다.');
+						e.preventDefault();
+					} else if (inputPassword !== repeatPassword) {
+						alert('비밀번호가 일치하지 않습니다.');
+						e.preventDefault(); // 폼 제출 막기
+					}
+				});
 	</script>
 </body>
 </html>
