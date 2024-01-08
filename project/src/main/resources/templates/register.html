@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head lang="ko">
-<div th:insert="headerTemplate :: headerTemplate"></div>
-<title>회원가입</title>
+<head lang="ko" th:replace="headerTemplate :: headerTemplate">
 </head>
-<body>
+<body class="bg-gradient-primary">
 	<div th:insert="bodyTemplate :: bodyTemplate"></div>
 
 	<div class="container">
