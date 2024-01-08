@@ -26,13 +26,13 @@ public class UsersController {
 		return "index";
 	}
 
-	@GetMapping("/signup")
-	public String signup() { // 회원가입 이동
-		return "signup";
+	@RequestMapping("/register")
+	public String register() { // 회원가입 이동
+		return "register";
 	}
-	
+
 	@PostMapping("/signup")
-    public String doSignup(Users user) {  // 회원가입
-        return "";
-    }
+	public String doSignup(Users user) { // 회원가입
+		return "";
+	}
 }

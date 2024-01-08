@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head lang="ko">
 <div th:insert="headerTemplate :: headerTemplate"></div>
-<title>타이틀ㅇㄹㄹ</title>
+<title>로그인</title>
 </head>
 <body class="bg-gradient-primary">
 	<div th:insert="bodyTemplate :: bodyTemplate"></div>
@@ -58,7 +58,7 @@
 											Password?</a>
 									</div>
 									<div class="text-center">
-										<a class="small" href="register.html">Create an Account!</a>
+										<a class="small" th:href="@{/users/register}">Create an Account!</a>
 									</div>
 								</div>
 							</div>
