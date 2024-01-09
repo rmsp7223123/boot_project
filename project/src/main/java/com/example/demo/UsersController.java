@@ -5,12 +5,13 @@ import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.example.demo.dto.UserJoinRequest;
-import com.example.demo.entity.Users;
 import com.example.demo.repository.UsersRepository;
 import com.example.demo.service.UserService;
 
@@ -22,6 +23,7 @@ import lombok.RequiredArgsConstructor;
 public class UsersController {
 
 	private final UserService userService;
+	private final UsersRepository userRepository;
 
 	@RequestMapping("/login")
 	public String doLogin() {// 로그인
@@ -39,7 +41,7 @@ public class UsersController {
 	}
 
 	@PostMapping("/signup")
-	public String doSignup(@Validated @RequestBody UserJoinRequest userJoinRequest, BindingResult bindingResult) { // 회원가입
+	public String doSignup(@Validated @ModelAttribute UserJoinRequest userJoinRequest, BindingResult bindingResult) { // 회원가입
 		bindingResult = userService.joinValid(userJoinRequest, bindingResult);
 
 		if (bindingResult.hasErrors()) {
@@ -58,5 +60,13 @@ public class UsersController {
 	@RequestMapping("/home")
 	public String home() {
 		return "";
+	}
+
+	@GetMapping("/checkId")
+	@ResponseBody
+	public String checkId(@RequestParam("mId") String id) {
+		System.out.println("adfdasf");
+		boolean isDuplicate = userRepository.findByLoginId(id).isPresent();
+		return isDuplicate ? "1" : "0";
 	}
 }
