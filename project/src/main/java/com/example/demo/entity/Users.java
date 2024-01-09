@@ -14,10 +14,9 @@ import lombok.Setter;
 
 @Table(name = "users")
 @NoArgsConstructor(access = AccessLevel.PROTECTED) // 아무런 매개변수가 없는 생성자를 생성하되 다른 패키지에 소속된 클래스는 접근을 불허
-@AllArgsConstructor
 @Getter
+@Setter
 @Entity
-@Builder
 public class Users {
 
 	@Id // pk
@@ -26,11 +25,11 @@ public class Users {
 						// long 타입은 64비트의 부호 있는 정수로 매우 큰 범위의 값을 표현할 수 있으므로, 고유한 식별자로서 적합
 
 	private String loginId;
-	
+
 	private String password;
 
 	private String name;
-	
+
 	private String nickname;
 
 	private String gender;
@@ -39,5 +38,17 @@ public class Users {
 
 	private boolean isAdmin;
 
+	@Builder
+	public Users(Long Id, String loginId, String password, String name, String nickname, String gender, int age,
+			boolean isAdmin) {
+		this.Id = Id;
+		this.loginId = loginId;
+		this.password = password;
+		this.name = name;
+		this.nickname = nickname;
+		this.gender = gender;
+		this.age = age;
+		this.isAdmin = isAdmin;
+	}
 
 }

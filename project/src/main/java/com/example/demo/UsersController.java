@@ -1,22 +1,27 @@
 package com.example.demo;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.FieldError;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.example.demo.dto.UserJoinRequest;
 import com.example.demo.entity.Users;
 import com.example.demo.repository.UsersRepository;
+import com.example.demo.service.UserService;
 
 import lombok.RequiredArgsConstructor;
-
 
 @Controller
 @RequiredArgsConstructor
 @RequestMapping("/users")
 public class UsersController {
 
-	private final UsersRepository userRepository;
+	private final UserService userService;
 
 	@RequestMapping("/login")
 	public String doLogin() {// 로그인
@@ -34,11 +39,22 @@ public class UsersController {
 	}
 
 	@PostMapping("/signup")
-	public String doSignup(Users user) { // 회원가입
-		userRepository.save(user);
-        return "index";
+	public String doSignup(@Validated @RequestBody UserJoinRequest userJoinRequest, BindingResult bindingResult) { // 회원가입
+		bindingResult = userService.joinValid(userJoinRequest, bindingResult);
+
+		if (bindingResult.hasErrors()) {
+			for (FieldError error : bindingResult.getFieldErrors()) {
+				System.out.println("Field: " + error.getField());
+				System.out.println("Message: " + error.getDefaultMessage());
+			}
+			return "error";
+		}
+
+		userService.join(userJoinRequest);
+
+		return "index";
 	}
-	
+
 	@RequestMapping("/home")
 	public String home() {
 		return "";
