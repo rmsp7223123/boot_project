@@ -86,6 +86,7 @@
 		var pw = document.getElementById("inputPassword");
 		var pwCheck = document.getElementById("repeatPassword");
 		var message = document.getElementById("messagePw");
+		var messageId = document.getElementById("messageId");
 
 		pw.onkeyup = validatePassword;
 		pwCheck.onkeyup = validatePassword;
@@ -103,7 +104,6 @@
 		}
 		function checkId() {
 		    var inputed = $('#id').val();
-		    var messageId = document.getElementById("messageId");
 		    $.ajax({
 		        type: "GET",
 		        url: "/users/checkId",
@@ -111,10 +111,10 @@
 		        success: function(data) {
 		            if (data == 1) {
 		                messageId.innerHTML = "이미 존재하는 아이디입니다.";
-		                messageId.style.color = "green";
+		                messageId.style.color = "red";
 		            } else {
 		            	messageId.innerHTML = "사용  가능한 아이디입니다.";
-		            	messageId.style.color = "red";
+		            	messageId.style.color = "green";
 		            }
 		        }
 		    });
@@ -130,17 +130,19 @@
 					var nickname = document.getElementById('nickname').value;
 					var inputPassword = document.getElementById('inputPassword').value;
 				    var repeatPassword = document.getElementById('repeatPassword').value;
-					if (!id || !age || !inputPassword || !repeatPassword
-							|| !name || !nickname) {
-						alert('모든 필드를 채워주세요.');
-						e.preventDefault();
-					} else if(age <= 0 || age > 100){
-						alert('나이에 0이하의 값이나 100이상의 값은 입력할 수 없습니다.');
-						e.preventDefault();
-					} else if (inputPassword !== repeatPassword) {
-						alert('비밀번호가 일치하지 않습니다.');
-						e.preventDefault(); // 폼 제출 막기
-					}
+				    if (!id || !age || !inputPassword || !repeatPassword || !name || !nickname) {
+				        alert('모든 필드를 채워주세요.');
+				        e.preventDefault();
+				      } else if(age <= 0 || age > 100){
+				        alert('나이에 0이하의 값이나 100이상의 값은 입력할 수 없습니다.');
+				        e.preventDefault();
+				      } else if (inputPassword !== repeatPassword) {
+				        alert('비밀번호가 일치하지 않습니다.');
+				        e.preventDefault(); // 폼 제출 막기
+				      } else if (messageId.innerHTML == "이미 존재하는 아이디입니다.") {
+				        alert('아이디를 다시 확인해주세요.');
+				        e.preventDefault();
+				      }
 				});
 	</script>
 </body>
