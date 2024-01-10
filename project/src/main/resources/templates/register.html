@@ -37,8 +37,9 @@
 									</div>
 									<div class="col-sm-6">
 										<input type="password" class="form-control form-control-user"
-											id="repeatPassword" placeholder="비밀번호를 재입력해주세요" name="passwordCheck"
-											maxlength="10"> <span id="messagePw"></span>
+											id="repeatPassword" placeholder="비밀번호를 재입력해주세요"
+											name="passwordCheck" maxlength="10"> <span
+											id="messagePw"></span>
 									</div>
 								</div>
 								<div class="form-group row">
@@ -48,7 +49,8 @@
 									</div>
 									<div class="col-sm-6">
 										<input type="text" class="form-control form-control-user"
-											id="nickname" placeholder="닉네임" name="nickname">
+											id="nickname" placeholder="닉네임" name="nickname" onchange="checkNickname()"> <span
+											id="messageNickname"></span>
 									</div>
 								</div>
 								<div class="form-group row">
@@ -87,6 +89,7 @@
 		var pwCheck = document.getElementById("repeatPassword");
 		var message = document.getElementById("messagePw");
 		var messageId = document.getElementById("messageId");
+		var messageNickname = document.getElementById("messageNickname");
 
 		pw.onkeyup = validatePassword;
 		pwCheck.onkeyup = validatePassword;
@@ -113,13 +116,29 @@
 		                messageId.innerHTML = "이미 존재하는 아이디입니다.";
 		                messageId.style.color = "red";
 		            } else {
-		            	messageId.innerHTML = "사용  가능한 아이디입니다.";
+		            	messageId.innerHTML = "사용 가능한 아이디입니다.";
 		            	messageId.style.color = "green";
 		            }
 		        }
 		    });
 		}
-		
+		function checkNickname() {
+		    var inputed = $('#nickname').val();
+		    $.ajax({
+		        type: "GET",
+		        url: "/users/checkNickname",
+		        data: {"mNickname" : inputed},
+		        success: function(data) {
+		            if (data == 1) {
+		                messageNickname.innerHTML = "이미 존재하는 닉네임입니다.";
+		                messageNickname.style.color = "red";
+		            } else {
+		            	messageNickname.innerHTML = "사용 가능한 닉네임입니다.";
+		            	messageNickname.style.color = "green";
+		            }
+		        }
+		    });
+		}
 
 		document.querySelector('.user').addEventListener(
 				'submit',
@@ -142,6 +161,9 @@
 				      } else if (messageId.innerHTML == "이미 존재하는 아이디입니다.") {
 				        alert('아이디를 다시 확인해주세요.');
 				        e.preventDefault();
+				      } else if(messageNickname.innerHTML == "이미 존재하는 아이디입니다.") {
+				        alert('닉네임을 다시 확인해주세요.');
+					    e.preventDefault();
 				      }
 				});
 	</script>

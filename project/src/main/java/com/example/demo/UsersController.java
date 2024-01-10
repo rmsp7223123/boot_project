@@ -65,8 +65,14 @@ public class UsersController {
 	@GetMapping("/checkId")
 	@ResponseBody
 	public String checkId(@RequestParam("mId") String id) {
-		System.out.println("adfdasf");
 		boolean isDuplicate = userRepository.findByLoginId(id).isPresent();
+		return isDuplicate ? "1" : "0";
+	}
+	
+	@GetMapping("/checkNickname")
+	@ResponseBody
+	public String checkNickname(@RequestParam("mNickname") String nickname) {
+		boolean isDuplicate = userRepository.findByNickname(nickname).isPresent();
 		return isDuplicate ? "1" : "0";
 	}
 }
