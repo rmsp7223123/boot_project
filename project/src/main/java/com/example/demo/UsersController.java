@@ -54,7 +54,7 @@ public class UsersController {
 
 		userService.join(userJoinRequest);
 
-		return "index";
+		return "redirect:/";
 	}
 
 	@RequestMapping("/home")

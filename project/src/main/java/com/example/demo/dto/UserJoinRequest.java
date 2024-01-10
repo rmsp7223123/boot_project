@@ -14,9 +14,10 @@ public class UserJoinRequest {
 	private String passwordCheck;
 	private String gender;
 	private int age;
+	private String name;
 
 	public Users toEntity(String encodedPassword) {
-		return Users.builder().loginId(loginId).password(encodedPassword).nickname(nickname).gender(gender).age(age)
+		return Users.builder().loginId(loginId).password(encodedPassword).nickname(nickname).gender(gender).age(age).name(name)
 				.isAdmin(false).build();
 	}
 
