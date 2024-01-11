@@ -1,5 +1,9 @@
 package com.example.demo;
 
+import java.util.Optional;
+import java.util.Random;
+
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
@@ -12,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.example.demo.dto.UserJoinRequest;
+import com.example.demo.entity.Users;
 import com.example.demo.repository.UsersRepository;
 import com.example.demo.service.UserService;
 
@@ -68,16 +73,50 @@ public class UsersController {
 		boolean isDuplicate = userRepository.findByLoginId(id).isPresent();
 		return isDuplicate ? "1" : "0";
 	}
-	
+
 	@GetMapping("/checkNickname")
 	@ResponseBody
 	public String checkNickname(@RequestParam("mNickname") String nickname) { // 닉네임 중복검사
 		boolean isDuplicate = userRepository.findByNickname(nickname).isPresent();
 		return isDuplicate ? "1" : "0";
 	}
-	
+
 	@RequestMapping("/findPassword")
 	public String findPassword() { // 비밀번호 찾기 화면 이동
 		return "login/findPassword";
 	}
+
+	@RequestMapping("/passwordRecovery")
+	public ResponseEntity<String> passwordRecovery(@RequestParam("mId") String loginId,
+			@RequestParam("mName") String name) { // 비밀번호 찾기
+		Optional<Users> userOptional = userRepository.findByLoginIdAndName(loginId, name);
+		if (userOptional.isPresent()) {
+			Users user = userOptional.get();
+			if (user.getName().equals(name) && user.getLoginId().equals(loginId)) {
+				String tempPassword = createTempPassword();
+				user.setPassword(tempPassword);
+				userRepository.save(user);
+				return ResponseEntity.ok(tempPassword);
+			}
+		}
+		return ResponseEntity.badRequest().body("fail");
+	}
+
+	public String createTempPassword() { // 비밀번호 찾기용 임시 비밀번호 생성 8글자의 영어(소문자) 숫자 조합
+		StringBuilder sb = new StringBuilder();
+		Random rand = new Random();
+		for (int i = 0; i < 8; i++) {
+			int index = rand.nextInt(2);
+			switch (index) {
+			case 0:
+				sb.append((char) (rand.nextInt(26) + 97)); // a-z
+				break;
+			case 1:
+				sb.append(rand.nextInt(10)); // 0-9
+				break;
+			}
+		}
+		return sb.toString();
+	}
+
 }
