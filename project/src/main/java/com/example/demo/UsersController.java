@@ -58,21 +58,26 @@ public class UsersController {
 	}
 
 	@RequestMapping("/home")
-	public String home() {
+	public String home() { // 로그인 후 홈화면 이동
 		return "";
 	}
 
 	@GetMapping("/checkId")
 	@ResponseBody
-	public String checkId(@RequestParam("mId") String id) {
+	public String checkId(@RequestParam("mId") String id) { // 아이디 중복검사
 		boolean isDuplicate = userRepository.findByLoginId(id).isPresent();
 		return isDuplicate ? "1" : "0";
 	}
 	
 	@GetMapping("/checkNickname")
 	@ResponseBody
-	public String checkNickname(@RequestParam("mNickname") String nickname) {
+	public String checkNickname(@RequestParam("mNickname") String nickname) { // 닉네임 중복검사
 		boolean isDuplicate = userRepository.findByNickname(nickname).isPresent();
 		return isDuplicate ? "1" : "0";
+	}
+	
+	@RequestMapping("/findPassword")
+	public String findPassword() { // 비밀번호 찾기 화면 이동
+		return "findPassword";
 	}
 }
