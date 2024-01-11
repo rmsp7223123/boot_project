@@ -37,7 +37,7 @@ public class UsersController {
 
 	@RequestMapping("/register")
 	public String register() { // 회원가입 이동
-		return "register";
+		return "login/register";
 	}
 
 	@PostMapping("/signup")
@@ -78,6 +78,6 @@ public class UsersController {
 	
 	@RequestMapping("/findPassword")
 	public String findPassword() { // 비밀번호 찾기 화면 이동
-		return "findPassword";
+		return "login/findPassword";
 	}
 }
