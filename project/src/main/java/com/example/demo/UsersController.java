@@ -3,7 +3,9 @@ package com.example.demo;
 import java.util.Optional;
 import java.util.Random;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
@@ -29,6 +31,9 @@ public class UsersController {
 
 	private final UserService userService;
 	private final UsersRepository userRepository;
+	
+	@Autowired
+	private final BCryptPasswordEncoder passwordEncoder;
 
 	@RequestMapping("/login")
 	public String doLogin() {// 로그인
@@ -94,7 +99,7 @@ public class UsersController {
 			Users user = userOptional.get();
 			if (user.getName().equals(name) && user.getLoginId().equals(loginId)) {
 				String tempPassword = createTempPassword();
-				user.setPassword(tempPassword);
+				user.setPassword(passwordEncoder.encode(tempPassword));
 				userRepository.save(user);
 				return ResponseEntity.ok(tempPassword);
 			}

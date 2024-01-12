@@ -83,3 +83,15 @@
 
 * Optional
 - null이 저장될 가능성이 있는 변수를 감싸는 Wrapper 클래스로, 참조하더라도 NPE가 발생하지 않도록 도와줌
+
+* ResponseEntity
+- Spring Framework에서 HTTP 응답을 나타내는 클래스
+- HTTP 응답의 본문, 상태 코드, 헤더 등을 모두 제어
+- ResponseEntity는 제네릭 타입을 가지며, 이는 HTTP 응답 본문의 타입을 나타냄
+- ex) ResponseEntity<String>은 응답 본문이 문자열인 응답
+- getStatusCode(): HTTP 상태 코드를 반환
+- getHeaders(): HTTP 헤더를 반환
+- getBody(): HTTP 응답 본문을 반환
+- hasBody(): HTTP 응답 본문이 있는지 여부를 반환
+- ok(): HTTP 상태 코드를 200 OK로 설정한 ResponseEntity 객체를 생성
+- notFound(): 상태 코드를 404 Not Found로 설정한 ResponseEntity 객체를 생성
