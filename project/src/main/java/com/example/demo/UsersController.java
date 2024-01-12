@@ -99,7 +99,7 @@ public class UsersController {
 				return ResponseEntity.ok(tempPassword);
 			}
 		}
-		return ResponseEntity.badRequest().body("fail");
+		return ResponseEntity.ok("fail");
 	}
 
 	public String createTempPassword() { // 비밀번호 찾기용 임시 비밀번호 생성 8글자의 영어(소문자) 숫자 조합
