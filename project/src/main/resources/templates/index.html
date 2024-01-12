@@ -17,22 +17,22 @@
 									<div class="text-center">
 										<h1 class="h4 text-gray-900 mb-4">로그인</h1>
 									</div>
-									<form class="user">
+									<form class="user" onsubmit="return checkFormAndCheckLogin();">
 										<div class="form-group">
-											<input type="email" class="form-control form-control-user"
-												id="exampleInputEmail" aria-describedby="emailHelp"
-												placeholder="Enter Email Address...">
+											<input type="text" class="form-control form-control-user"
+												id="loginId" name="loginId" placeholder="아이디를 입력해주세요">
 										</div>
 										<div class="form-group">
 											<input type="password" class="form-control form-control-user"
-												id="exampleInputPassword" placeholder="Password">
+												id="password" placeholder="비밀번호를 입력해주세요" name="password">
 										</div>
-										<a href="index.html"
-											class="btn btn-primary btn-user btn-block"> Login </a>
+										<button type="submit"
+											class="btn btn-primary btn-user btn-block">로그인</button>
 									</form>
 									<hr>
 									<div class="text-center">
-										<a class="small" th:href="@{/users/findPassword}">비밀번호를 잊어버리셨나요?</a>
+										<a class="small" th:href="@{/users/findPassword}">비밀번호를
+											잊어버리셨나요?</a>
 									</div>
 									<div class="text-center">
 										<a class="small" th:href="@{/users/register}">회원가입 하러가기</a>
@@ -48,5 +48,44 @@
 		</div>
 
 	</div>
+
+	<script>
+		function checkFormAndCheckLogin() {
+			if (checkForm()) {
+				checkLogin();
+			}
+			return false;
+		}
+		function checkForm() {
+			var id = document.getElementById("loginId");
+			var password = document.getElementById("password");
+
+			if (id.value === "" || name.value === "") {
+				alert("모든 필드를 입력해주세요.");
+				return false;
+			}
+
+			return true;
+		}
+		function checkLogin() {
+			var id = $('#loginId').val();
+			var password = $('#password').val();
+			$.ajax({
+				type : "GET",
+				url : "/users/login",
+				data : {
+					"mId" : loginId,
+					"mPassword" : password
+				},
+				success : function(data) {
+					if (data == "1") {
+						window.location.href = "/users/home";
+					} else {
+						alert("존재하지 않은 아이디거나 비밀번호가 틀렸습니다.");
+					}
+				}
+			});
+		}
+	</script>
 </body>
 </html>

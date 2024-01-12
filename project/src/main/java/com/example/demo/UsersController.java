@@ -31,13 +31,19 @@ public class UsersController {
 
 	private final UserService userService;
 	private final UsersRepository userRepository;
-	
+
 	@Autowired
 	private final BCryptPasswordEncoder passwordEncoder;
 
+	@RequestMapping("/home")
+	public String home() { // 로그인 후 홈화면 이동
+		return "home";
+	}
+
 	@RequestMapping("/login")
-	public String doLogin() {// 로그인
-		return "index";
+	public String doLogin(@RequestParam("mId") String loginId, @RequestParam("mPassword") String password) {// 로그인
+		boolean isDuplicate = userRepository.findByLoginIdAndPassword(loginId, password).isPresent();
+		return isDuplicate ? "1" : "0";
 	}
 
 	@GetMapping("/logout")
@@ -65,11 +71,6 @@ public class UsersController {
 		userService.join(userJoinRequest);
 
 		return "redirect:/";
-	}
-
-	@RequestMapping("/home")
-	public String home() { // 로그인 후 홈화면 이동
-		return "";
 	}
 
 	@GetMapping("/checkId")
