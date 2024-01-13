@@ -41,9 +41,16 @@ public class UsersController {
 	}
 
 	@RequestMapping("/login")
-	public String doLogin(@RequestParam("mId") String loginId, @RequestParam("mPassword") String password) {// 로그인
-		boolean isDuplicate = userRepository.findByLoginIdAndPassword(loginId, password).isPresent();
-		return isDuplicate ? "1" : "0";
+	public ResponseEntity<String> doLogin(@RequestParam("mId") String loginId,
+			@RequestParam("mPassword") String password) {// 로그인
+		Optional<Users> userOptional = userRepository.findByLoginId(loginId);
+		if (userOptional.isPresent()) {
+			Users user = userOptional.get();
+			if (user.getLoginId().equals(loginId) && passwordEncoder.matches(password, user.getPassword())) {
+				return ResponseEntity.ok("success");
+			}
+		}
+		return ResponseEntity.ok("fail");
 	}
 
 	@GetMapping("/logout")

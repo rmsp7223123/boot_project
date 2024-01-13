@@ -60,7 +60,7 @@
 			var id = document.getElementById("loginId");
 			var password = document.getElementById("password");
 
-			if (id.value === "" || name.value === "") {
+			if (id.value === "" || password.value === "") {
 				alert("모든 필드를 입력해주세요.");
 				return false;
 			}
@@ -74,11 +74,12 @@
 				type : "GET",
 				url : "/users/login",
 				data : {
-					"mId" : loginId,
+					"mId" : id,
 					"mPassword" : password
 				},
+				async : false,
 				success : function(data) {
-					if (data == "1") {
+					if (data == "success") {
 						window.location.href = "/users/home";
 					} else {
 						alert("존재하지 않은 아이디거나 비밀번호가 틀렸습니다.");
