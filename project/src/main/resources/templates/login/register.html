@@ -4,12 +4,9 @@
 </head>
 <body class="bg-gradient-primary">
 	<div th:insert="~{bodyTemplate :: bodyTemplate}"></div>
-
 	<div class="container">
-
 		<div class="card o-hidden border-0 shadow-lg my-5">
 			<div class="card-body p-0">
-				<!-- Nested Row within Card Body -->
 				<div class="d-flex justify-content-center">
 					<div class="col-lg-10">
 						<div class="p-5">
@@ -20,8 +17,8 @@
 								<div class="form-group row">
 									<div class="col-sm-6 mb-3 mb-sm-0">
 										<input type="text" class="form-control form-control-user"
-											id="id" placeholder="아이디를 입력해주세요(최대 10자)" name="loginId"
-											maxlength="10" onchange="checkId()"><span
+											id="id" placeholder="아이디를 입력해주세요(최대 10자, 영문과 숫자만 입력가능)" name="loginId"
+											maxlength="10" onchange="checkId()" pattern="[A-Za-z0-9]+"><span
 											id="messageId"></span>
 									</div>
 									<div class="col-sm-6">
@@ -49,7 +46,8 @@
 									</div>
 									<div class="col-sm-6">
 										<input type="text" class="form-control form-control-user"
-											id="nickname" placeholder="닉네임" name="nickname" onchange="checkNickname()"> <span
+											id="nickname" placeholder="닉네임" name="nickname"
+											onchange="checkNickname()"> <span
 											id="messageNickname"></span>
 									</div>
 								</div>
@@ -83,17 +81,14 @@
 		</div>
 
 	</div>
-
 	<script>
 		var pw = document.getElementById("inputPassword");
 		var pwCheck = document.getElementById("repeatPassword");
 		var message = document.getElementById("messagePw");
 		var messageId = document.getElementById("messageId");
 		var messageNickname = document.getElementById("messageNickname");
-
 		pw.onkeyup = validatePassword;
 		pwCheck.onkeyup = validatePassword;
-
 		function validatePassword() {
 			if (pw.value == "" && pwCheck.value == "") {
 				message.innerHTML = "";
@@ -139,7 +134,6 @@
 		        }
 		    });
 		}
-
 		document.querySelector('.user').addEventListener(
 				'submit',
 				function(e) {
@@ -161,9 +155,11 @@
 				      } else if (messageId.innerHTML == "이미 존재하는 아이디입니다.") {
 				        alert('아이디를 다시 확인해주세요.');
 				        e.preventDefault();
-				      } else if(messageNickname.innerHTML == "이미 존재하는 아이디입니다.") {
+				      } else if(messageNickname.innerHTML == "이미 존재하는 닉네임입니다.") {
 				        alert('닉네임을 다시 확인해주세요.');
 					    e.preventDefault();
+				      } else {
+				    	  alert('축하합니다! 회원가입이 성공적으로 이루어졌습니다.');
 				      }
 				});
 	</script>
