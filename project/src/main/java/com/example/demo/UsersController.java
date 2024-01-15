@@ -22,6 +22,7 @@ import com.example.demo.entity.Users;
 import com.example.demo.repository.UsersRepository;
 import com.example.demo.service.UserService;
 
+import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 
 @Controller
@@ -42,11 +43,12 @@ public class UsersController {
 
 	@RequestMapping("/login")
 	public ResponseEntity<String> doLogin(@RequestParam("mId") String loginId,
-			@RequestParam("mPassword") String password) {// 로그인
+			@RequestParam("mPassword") String password, HttpSession session) {// 로그인
 		Optional<Users> userOptional = userRepository.findByLoginId(loginId);
 		if (userOptional.isPresent()) {
 			Users user = userOptional.get();
 			if (user.getLoginId().equals(loginId) && passwordEncoder.matches(password, user.getPassword())) {
+				session.setAttribute("user", user);
 				return ResponseEntity.ok("success");
 			}
 		}
@@ -54,7 +56,8 @@ public class UsersController {
 	}
 
 	@GetMapping("/logout")
-	public String logout() { // 로그아웃
+	public String logout(HttpSession session) { // 로그아웃
+		session.invalidate(); // 세션 무효화
 		return "index";
 	}
 

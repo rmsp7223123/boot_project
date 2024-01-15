@@ -21,7 +21,8 @@ public class SecurityConfig {
 	@Bean
 	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 
-		return http.formLogin().loginPage("/users/login") // 로그인 페이지
+		return http.authorizeRequests().requestMatchers("/users/login", "/users/register", "/users/signup").permitAll().anyRequest()
+				.authenticated().and().formLogin().loginPage("/users/login") // 로그인 페이지
 				.usernameParameter("loginId") // 로그인에 사용될 id
 				.passwordParameter("password") // 로그인에 사용될 password
 				.failureUrl("/users/login?fail") // 로그인 실패 시 redirect 될 URL => 실패 메세지 출력
@@ -31,5 +32,5 @@ public class SecurityConfig {
 				// JSESSIONID는 톰캣 같은 서블릿 컨테이너가 세션을 관리하기 위해 사용하는 쿠키 이름
 				.logoutSuccessHandler(new LogoutSuccessHandler()).and().build();
 	}
-	
+
 }
