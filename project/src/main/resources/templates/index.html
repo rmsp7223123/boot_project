@@ -71,11 +71,11 @@
 			var id = $('#loginId').val();
 			var password = $('#password').val();
 			$.ajax({
-				type : "GET",
+				type : "POST",
 				url : "/users/login",
 				data : {
-					"mId" : id,
-					"mPassword" : password
+					"loginId" : id,
+					"password" : password
 				},
 				async : false,
 				success : function(data) {

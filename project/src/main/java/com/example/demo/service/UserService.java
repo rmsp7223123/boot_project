@@ -1,11 +1,14 @@
 package com.example.demo.service;
 
+import java.util.Optional;
+
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 
 import com.example.demo.dto.UserJoinRequest;
+import com.example.demo.entity.Users;
 import com.example.demo.repository.UsersRepository;
 
 import lombok.RequiredArgsConstructor;
@@ -47,6 +50,18 @@ public class UserService {
 	
 	public void join(UserJoinRequest req) {
         userRepository.save(req.toEntity( encoder.encode(req.getPassword()) ));
+    }
+	
+	public String login(String loginId, String password) {
+        Optional<Users> user = userRepository.findByLoginId(loginId);
+        if (user.isEmpty()) {
+            return "해당 유저를 찾지못했습니다.";
+        }
+        if (encoder.matches(password, user.get().getPassword())) {
+            return "로그인 성공!";
+        }
+        return "비밀번호가 일치하지 않습니다";
+
     }
 
 }

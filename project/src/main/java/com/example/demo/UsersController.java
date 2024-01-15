@@ -42,8 +42,8 @@ public class UsersController {
 	}
 
 	@RequestMapping("/login")
-	public ResponseEntity<String> doLogin(@RequestParam("mId") String loginId,
-			@RequestParam("mPassword") String password, HttpSession session) {// 로그인
+	public ResponseEntity<String> doLogin(@RequestParam("loginId") String loginId,
+			@RequestParam("password") String password, HttpSession session) {// 로그인
 		Optional<Users> userOptional = userRepository.findByLoginId(loginId);
 		if (userOptional.isPresent()) {
 			Users user = userOptional.get();

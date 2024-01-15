@@ -14,7 +14,7 @@ import lombok.RequiredArgsConstructor;
 @Configuration
 @EnableWebSecurity
 @RequiredArgsConstructor
-public class SecurityConfig {
+public class SecurityConfig{
 
 	private final com.example.demo.repository.UsersRepository userRepository;
 

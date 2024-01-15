@@ -1,7 +1,12 @@
  * build.gradle에 스프링 시큐리티 의존성을 주입시 자동으로 기본 로그인화면 생성됨
    @SpringBootApplication어노테이션에 (exclude = SecurityAutoConfiguration.class) 추가시 제거
    
-   
+
+@EnableWebSecurity
+- Spring Security 설정을 활성화 하는 어노테이션
+- 어노테이션을 사용하면 Spring MVC 통합, Spring Security 필터 체인의 설정, CSRF(Cross-Site Request Forgery) 보호 등을 기본적으로 활성화
+
+  
 @RequiredArgsConstructor
 - Lombok으로 스프링에서 DI(의존성 주입)의 방법 중에 생성자 주입을 임의의 코드없이 자동으로 설정해주는 어노테이션
 - 초기화 되지 않은 final 필드나 @NonNull 어노테이션이 붙은 필드에 대해 생성자를 만들어 줌
