@@ -21,11 +21,15 @@ public class SecurityConfig {
 	@Bean
 	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 
-		return http.authorizeRequests().requestMatchers("/users/login", "/users/register", "/users/signup").permitAll().anyRequest()
-				.authenticated().and().formLogin().loginPage("/users/login") // 로그인 페이지
+		return http.authorizeRequests()
+				.requestMatchers("/users/login", "/users/register", "/users/signup", "/", "css/**", "datatables/**",
+						"demo/**", "img/**", "jquery/**", "js/demo/**", "js/**", "mixins/**", "navs/**", "scss/**",
+						"scss/mixins/**", "scss/utilities/**", "scss/vendor/**", "utilities/**", "vendor/**")
+				.permitAll().requestMatchers("/users/home").authenticated().anyRequest().authenticated().and()
+				.formLogin().loginPage("/") // 로그인페이지
 				.usernameParameter("loginId") // 로그인에 사용될 id
 				.passwordParameter("password") // 로그인에 사용될 password
-				.failureUrl("/users/login?fail") // 로그인 실패 시 redirect 될 URL => 실패 메세지 출력
+				.failureUrl("/") // 로그인 실패 시 redirect 될 URL
 				.successHandler(new LoginSuccessHandler(userRepository)) // 로그인 성공 시 실행 될 Handler
 				.and().logout().logoutUrl("/users/logout") // 로그아웃 URL
 				.invalidateHttpSession(true).deleteCookies("JSESSIONID") // 서버 측에서 클라이언트의 "JSESSIONID"라는 이름의 쿠키를 삭제
