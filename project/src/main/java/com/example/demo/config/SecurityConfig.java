@@ -1,13 +1,21 @@
 package com.example.demo.config;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.authentication.AuthenticationProvider;
+import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
+import org.springframework.security.config.annotation.SecurityBuilder;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.config.annotation.web.WebSecurityConfigurer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
 import com.example.demo.handler.LoginSuccessHandler;
 import com.example.demo.handler.LogoutSuccessHandler;
+import com.example.demo.service.UserService;
 
 import lombok.RequiredArgsConstructor;
 
@@ -18,8 +26,16 @@ public class SecurityConfig {
 
 	private final com.example.demo.repository.UsersRepository userRepository;
 
+	@Autowired
+	private UserService userService;
+
+	@Autowired
+	private BCryptPasswordEncoder passwordEncoder;
+
 	@Bean
 	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+
+		http.authenticationProvider(authenticationProvider());
 
 		return http.authorizeRequests()
 				.requestMatchers("/login", "/users/register", "/users/signup", "/", "css/**", "datatables/**",
@@ -35,6 +51,14 @@ public class SecurityConfig {
 				.invalidateHttpSession(true).deleteCookies("JSESSIONID") // 서버 측에서 클라이언트의 "JSESSIONID"라는 이름의 쿠키를 삭제
 				// JSESSIONID는 톰캣 같은 서블릿 컨테이너가 세션을 관리하기 위해 사용하는 쿠키 이름
 				.logoutSuccessHandler(new LogoutSuccessHandler()).and().getOrBuild();
+	}
+
+	@Bean
+	public DaoAuthenticationProvider authenticationProvider() {
+		DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider();
+		authProvider.setUserDetailsService(userService);
+		authProvider.setPasswordEncoder(passwordEncoder);
+		return authProvider;
 	}
 
 }

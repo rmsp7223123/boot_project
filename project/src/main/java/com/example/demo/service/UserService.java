@@ -1,11 +1,18 @@
 package com.example.demo.service;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.User;
 
 import com.example.demo.dto.UserJoinRequest;
 import com.example.demo.entity.Users;
@@ -15,7 +22,7 @@ import lombok.RequiredArgsConstructor;
 
 @Service
 @RequiredArgsConstructor
-public class UserService {
+public class UserService implements UserDetailsService {
 
 	private final UsersRepository userRepository;
 	private final BCryptPasswordEncoder encoder;
@@ -47,21 +54,36 @@ public class UserService {
 		return bindingResult;
 
 	}
-	
-	public void join(UserJoinRequest req) {
-        userRepository.save(req.toEntity( encoder.encode(req.getPassword()) ));
-    }
-	
-	public String login(String loginId, String password) {
-        Optional<Users> user = userRepository.findByLoginId(loginId);
-        if (user.isEmpty()) {
-            return "해당 유저를 찾지못했습니다.";
-        }
-        if (encoder.matches(password, user.get().getPassword())) {
-            return "로그인 성공!";
-        }
-        return "비밀번호가 일치하지 않습니다";
 
-    }
+	public void join(UserJoinRequest req) {
+		userRepository.save(req.toEntity(encoder.encode(req.getPassword())));
+	}
+
+	public String login(String loginId, String password) {
+		Optional<Users> user = userRepository.findByLoginId(loginId);
+		if (user.isEmpty()) {
+			return "해당 유저를 찾지못했습니다.";
+		}
+		if (encoder.matches(password, user.get().getPassword())) {
+			return "로그인 성공!";
+		}
+		return "비밀번호가 일치하지 않습니다";
+
+	}
+
+	@Override
+	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+		Optional<Users> user = userRepository.findByLoginId(username);
+		if (user.isEmpty()) {
+			throw new UsernameNotFoundException("해당 유저를 찾지 못했습니다.");
+		}
+		List<SimpleGrantedAuthority> authorities = new ArrayList<>();
+	    if (user.get().isAdmin()) {
+	        authorities.add(new SimpleGrantedAuthority("ROLE_ADMIN"));
+	    } else {
+	        authorities.add(new SimpleGrantedAuthority("ROLE_USER"));
+	    }
+		return new User(user.get().getLoginId(), user.get().getPassword(), new ArrayList<>());
+	}
 
 }
