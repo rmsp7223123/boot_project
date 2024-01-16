@@ -17,7 +17,7 @@
 									<div class="text-center">
 										<h1 class="h4 text-gray-900 mb-4">로그인</h1>
 									</div>
-									<form class="user" onsubmit="return checkFormAndCheckLogin();">
+									<form class="user" action="/login" method="post">
 										<div class="form-group">
 											<input type="text" class="form-control form-control-user"
 												id="loginId" name="loginId" placeholder="아이디를 입력해주세요" autocomplete="off">
@@ -82,7 +82,7 @@
 					if (data == "success") {
 						window.location.href = "/users/home";
 					} else {
-						alert("존재하지 않은 아이디거나 비밀번호가 틀렸습니다.");
+						alert("존재하지 않은 아이디거나 비밀번호가 틀렸습니다.d");
 					}
 				}
 			});

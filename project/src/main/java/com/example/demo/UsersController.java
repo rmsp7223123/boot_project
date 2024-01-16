@@ -45,6 +45,8 @@ public class UsersController {
 	public ResponseEntity<String> doLogin(@RequestParam("loginId") String loginId,
 			@RequestParam("password") String password, HttpSession session) {// 로그인
 		Optional<Users> userOptional = userRepository.findByLoginId(loginId);
+		System.out.println(userOptional.get().getLoginId());
+		System.out.println(userOptional.get().getPassword());
 		if (userOptional.isPresent()) {
 			Users user = userOptional.get();
 			if (user.getLoginId().equals(loginId) && passwordEncoder.matches(password, user.getPassword())) {

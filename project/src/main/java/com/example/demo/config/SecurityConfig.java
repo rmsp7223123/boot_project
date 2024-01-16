@@ -14,7 +14,7 @@ import lombok.RequiredArgsConstructor;
 @Configuration
 @EnableWebSecurity
 @RequiredArgsConstructor
-public class SecurityConfig{
+public class SecurityConfig {
 
 	private final com.example.demo.repository.UsersRepository userRepository;
 
@@ -22,7 +22,7 @@ public class SecurityConfig{
 	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 
 		return http.authorizeRequests()
-				.requestMatchers("/users/login", "/users/register", "/users/signup", "/", "css/**", "datatables/**",
+				.requestMatchers("/login", "/users/register", "/users/signup", "/", "css/**", "datatables/**",
 						"demo/**", "img/**", "jquery/**", "js/demo/**", "js/**", "mixins/**", "navs/**", "scss/**",
 						"scss/mixins/**", "scss/utilities/**", "scss/vendor/**", "utilities/**", "vendor/**")
 				.permitAll().requestMatchers("/users/home").authenticated().anyRequest().authenticated().and()
@@ -34,7 +34,7 @@ public class SecurityConfig{
 				.and().logout().logoutUrl("/users/logout") // 로그아웃 URL
 				.invalidateHttpSession(true).deleteCookies("JSESSIONID") // 서버 측에서 클라이언트의 "JSESSIONID"라는 이름의 쿠키를 삭제
 				// JSESSIONID는 톰캣 같은 서블릿 컨테이너가 세션을 관리하기 위해 사용하는 쿠키 이름
-				.logoutSuccessHandler(new LogoutSuccessHandler()).and().build();
+				.logoutSuccessHandler(new LogoutSuccessHandler()).and().getOrBuild();
 	}
 
 }
