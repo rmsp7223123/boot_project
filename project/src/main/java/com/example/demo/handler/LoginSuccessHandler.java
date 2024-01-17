@@ -30,6 +30,7 @@ public class LoginSuccessHandler implements AuthenticationSuccessHandler {
 		session.setMaxInactiveInterval(3600); // 세션유지 3600초
 
 		Users loginUser = userRepository.findByLoginId(authentication.getName()).get();
+		session.setAttribute("user", loginUser);
 
 		response.setContentType("text/html"); // 응답의 컨텐츠 타입을 HTML로 설정
 		PrintWriter pw = response.getWriter(); // 응답에 쓸 PrintWriter 객체

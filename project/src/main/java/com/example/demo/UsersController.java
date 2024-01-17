@@ -5,6 +5,8 @@ import java.util.Random;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
@@ -19,6 +21,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.example.demo.dto.UserJoinRequest;
 import com.example.demo.entity.Users;
+import com.example.demo.handler.LoginSuccessHandler;
 import com.example.demo.repository.UsersRepository;
 import com.example.demo.service.UserService;
 
