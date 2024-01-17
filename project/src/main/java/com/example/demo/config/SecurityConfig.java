@@ -37,8 +37,8 @@ public class SecurityConfig {
 
 		http.authenticationProvider(authenticationProvider());
 
-		return http.authorizeRequests()
-				.requestMatchers("/login", "/users/register", "/users/signup", "/", "css/**", "datatables/**",
+		return http.csrf().disable().cors().and().authorizeRequests()
+				.requestMatchers("/users/login","/login", "/users/register", "/users/signup", "/", "css/**", "datatables/**",
 						"demo/**", "img/**", "jquery/**", "js/demo/**", "js/**", "mixins/**", "navs/**", "scss/**",
 						"scss/mixins/**", "scss/utilities/**", "scss/vendor/**", "utilities/**", "vendor/**")
 				.permitAll().requestMatchers("/users/home").authenticated().anyRequest().authenticated().and()

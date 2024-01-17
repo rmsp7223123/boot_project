@@ -17,10 +17,11 @@
 									<div class="text-center">
 										<h1 class="h4 text-gray-900 mb-4">로그인</h1>
 									</div>
-									<form class="user" action="/login" method="post">
+									<form class="user" onsubmit="return checkFormAndCheckLogin();">
 										<div class="form-group">
 											<input type="text" class="form-control form-control-user"
-												id="loginId" name="loginId" placeholder="아이디를 입력해주세요" autocomplete="off">
+												id="loginId" name="loginId" placeholder="아이디를 입력해주세요"
+												autocomplete="off">
 										</div>
 										<div class="form-group">
 											<input type="password" class="form-control form-control-user"
@@ -50,43 +51,43 @@
 	</div>
 
 	<script>
-// 		function checkFormAndCheckLogin() {
-// 			if (checkForm()) {
-// 				checkLogin();
-// 			}
-// 			return false;
-// 		}
-// 		function checkForm() {
-// 			var id = document.getElementById("loginId");
-// 			var password = document.getElementById("password");
+		function checkFormAndCheckLogin() {
+			if (checkForm()) {
+				checkLogin();
+			}
+			return false;
+		}
+		function checkForm() {
+			var id = document.getElementById("loginId");
+			var password = document.getElementById("password");
 
-// 			if (id.value === "" || password.value === "") {
-// 				alert("모든 필드를 입력해주세요.");
-// 				return false;
-// 			}
+			if (id.value === "" || password.value === "") {
+				alert("모든 필드를 입력해주세요.");
+				return false;
+			}
 
-// 			return true;
-// 		}
-// 		function checkLogin() {
-// 			var id = $('#loginId').val();
-// 			var password = $('#password').val();
-// 			$.ajax({
-// 				type : "POST",
-// 				url : "/users/login",
-// 				data : {
-// 					"loginId" : id,
-// 					"password" : password
-// 				},
-// 				async : false,
-// 				success : function(data) {
-// 					if (data == "success") {
-// 						window.location.href = "/users/home";
-// 					} else {
-// 						alert("존재하지 않은 아이디거나 비밀번호가 틀렸습니다.d");
-// 					}
-// 				}
-// 			});
-// 		}
+			return true;
+		}
+		function checkLogin() {
+			var id = $('#loginId').val();
+			var password = $('#password').val();
+			$.ajax({
+				type : "POST",
+				url : "/users/login",
+				data : {
+					"loginId" : id,
+					"password" : password
+				},
+				async : false,
+				success : function(data) {
+					if (data == "success") {
+						window.location.href = "/users/home";
+					} else {
+						alert("존재하지 않은 아이디거나 비밀번호가 틀렸습니다.d");
+					}
+				}
+			});
+		}
 	</script>
 </body>
 </html>
