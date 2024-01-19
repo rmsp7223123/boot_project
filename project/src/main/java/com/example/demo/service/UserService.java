@@ -78,12 +78,17 @@ public class UserService implements UserDetailsService {
 			throw new UsernameNotFoundException("해당 유저를 찾지 못했습니다.");
 		}
 		List<SimpleGrantedAuthority> authorities = new ArrayList<>();
-	    if (user.get().isAdmin()) {
-	        authorities.add(new SimpleGrantedAuthority("ROLE_ADMIN"));
-	    } else {
-	        authorities.add(new SimpleGrantedAuthority("ROLE_USER"));
-	    }
+		if (user.get().isAdmin()) {
+			authorities.add(new SimpleGrantedAuthority("ROLE_ADMIN"));
+		} else {
+			authorities.add(new SimpleGrantedAuthority("ROLE_USER"));
+		}
 		return new User(user.get().getLoginId(), user.get().getPassword(), new ArrayList<>());
+	}
+
+	public Users findUserByLoginId(String loginId) {
+		return userRepository.findByLoginId(loginId)
+				.orElseThrow(() -> new UsernameNotFoundException("해당 유저를 찾지 못했습니다."));
 	}
 
 }

@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -20,7 +21,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class SecurityConfig {
 
-	private final com.example.demo.repository.UsersRepository userRepository;
+//	private final com.example.demo.repository.UsersRepository userRepository;
 
 	@Autowired
 	private UserService userService;
@@ -31,25 +32,15 @@ public class SecurityConfig {
 	@Bean
 	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 
-		http.authenticationProvider(authenticationProvider())
-				.csrf().disable().cors().and().authorizeRequests()
-				.requestMatchers("/users/login", "/login", "/users/register", "/users/signup", "/", "css/**",
-						"datatables/**", "demo/**", "img/**", "jquery/**", "js/demo/**", "js/**", "mixins/**",
-						"navs/**", "scss/**", "scss/mixins/**", "scss/utilities/**", "scss/vendor/**", "utilities/**",
-						"vendor/**")
-				.permitAll().anyRequest().authenticated().and().formLogin().loginPage("/").usernameParameter("loginId")
-				.passwordParameter("password").successHandler(new LoginSuccessHandler(userRepository)).and().logout()
-				.logoutUrl("/users/logout").invalidateHttpSession(true).deleteCookies("JSESSIONID")
-				.logoutSuccessHandler(new LogoutSuccessHandler());
+		http.authorizeRequests().anyRequest().authenticated().and().formLogin()
+				.successHandler(new LoginSuccessHandler(userService)).and().httpBasic();
+
 		return http.build();
 	}
 
-	@Bean
-	public DaoAuthenticationProvider authenticationProvider() {
-		DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider();
-		authProvider.setUserDetailsService(userService);
-		authProvider.setPasswordEncoder(passwordEncoder);
-		return authProvider;
-	}
+	@Autowired
+    public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
+        auth.userDetailsService(userService);
+    }
 
 }
