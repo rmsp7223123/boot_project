@@ -10,6 +10,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
+import com.example.demo.handler.LoginFailureHandler;
 import com.example.demo.handler.LoginSuccessHandler;
 import com.example.demo.handler.LogoutSuccessHandler;
 import com.example.demo.service.UserService;
@@ -38,7 +39,7 @@ public class SecurityConfig {
 						"navs/**", "scss/**", "scss/mixins/**", "scss/utilities/**", "scss/vendor/**", "utilities/**",
 						"vendor/**")
 				.permitAll().anyRequest().authenticated().and().formLogin().loginPage("/").loginProcessingUrl("/login_process")
-				.successHandler(new LoginSuccessHandler(userService)).and().httpBasic();
+				.successHandler(new LoginSuccessHandler(userService)).failureHandler(new LoginFailureHandler()).and().httpBasic();
 
 		return http.build();
 	}
