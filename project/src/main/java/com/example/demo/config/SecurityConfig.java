@@ -32,15 +32,20 @@ public class SecurityConfig {
 	@Bean
 	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 
-		http.authorizeRequests().anyRequest().authenticated().and().formLogin()
+		http.authorizeRequests()
+				.requestMatchers("/login", "/users/register","/users/findPassword", "/users/signup", "/", "css/**",
+						"datatables/**", "demo/**", "img/**", "jquery/**", "js/demo/**", "js/**", "mixins/**",
+						"navs/**", "scss/**", "scss/mixins/**", "scss/utilities/**", "scss/vendor/**", "utilities/**",
+						"vendor/**")
+				.permitAll().anyRequest().authenticated().and().formLogin().loginPage("/").loginProcessingUrl("/login_process")
 				.successHandler(new LoginSuccessHandler(userService)).and().httpBasic();
 
 		return http.build();
 	}
 
 	@Autowired
-    public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-        auth.userDetailsService(userService);
-    }
+	public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
+		auth.userDetailsService(userService);
+	}
 
 }
