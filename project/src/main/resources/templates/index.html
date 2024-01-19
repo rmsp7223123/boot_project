@@ -52,6 +52,15 @@
 
 	</div>
 	<script>
+		$(document).ready(function() {
+			toastr.options = {
+				"closeButton" : true,
+				"progressBar" : true,
+				"positionClass" : "toast-top-right",
+				"timeOut" : "2000"
+			};
+			toastr.success('토스트 실험');
+		});
 		function validateForm() {
 			var loginId = document.getElementById('loginId').value;
 			var password = document.getElementById('password').value;

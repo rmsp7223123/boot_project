@@ -59,9 +59,8 @@ public class UsersController {
 //	}
 
 	@GetMapping("/logout")
-	public String logout(HttpSession session) { // 로그아웃
-		session.invalidate(); // 세션 무효화
-		return "index";
+	public String logout() { // 로그아웃
+		return "redirect:/";
 	}
 
 	@RequestMapping("/register")

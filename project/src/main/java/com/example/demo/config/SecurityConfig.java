@@ -34,12 +34,13 @@ public class SecurityConfig {
 	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 
 		http.authorizeRequests()
-				.requestMatchers("/login", "/users/register","/users/findPassword", "/users/signup", "/", "css/**",
-						"datatables/**", "demo/**", "img/**", "jquery/**", "js/demo/**", "js/**", "mixins/**",
-						"navs/**", "scss/**", "scss/mixins/**", "scss/utilities/**", "scss/vendor/**", "utilities/**",
-						"vendor/**")
-				.permitAll().anyRequest().authenticated().and().formLogin().loginPage("/").loginProcessingUrl("/login_process")
-				.successHandler(new LoginSuccessHandler(userService)).failureHandler(new LoginFailureHandler()).and().httpBasic();
+				.requestMatchers("/login", "/users/register", "/users/findPassword", "/users/signup", "/users/checkId",
+						"/users/checkNickname", "/users/passwordRecovery", "/", "css/**", "datatables/**", "demo/**",
+						"img/**", "jquery/**", "js/demo/**", "js/**", "mixins/**", "navs/**", "scss/**",
+						"scss/mixins/**", "scss/utilities/**", "scss/vendor/**", "utilities/**", "vendor/**")
+				.permitAll().anyRequest().authenticated().and().formLogin().loginPage("/")
+				.loginProcessingUrl("/login_process").successHandler(new LoginSuccessHandler(userService))
+				.failureHandler(new LoginFailureHandler()).and().httpBasic();
 
 		return http.build();
 	}
