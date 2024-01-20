@@ -11,9 +11,12 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.User;
 
+import com.example.demo.dto.UserDTO;
 import com.example.demo.dto.UserJoinRequest;
 import com.example.demo.entity.Users;
 import com.example.demo.repository.UsersRepository;
@@ -89,6 +92,29 @@ public class UserService implements UserDetailsService {
 	public Users findUserByLoginId(String loginId) {
 		return userRepository.findByLoginId(loginId)
 				.orElseThrow(() -> new UsernameNotFoundException("해당 유저를 찾지 못했습니다."));
+	}
+
+	public UserDTO getAuthenticatedUser() {
+		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+		if (authentication == null) {
+			return null;
+		}
+		String username = authentication.getName();
+		Optional<Users> userOptional = userRepository.findByLoginId(username);
+		if (!userOptional.isPresent()) {
+			return null;
+		}
+
+		Users user = userOptional.get();
+
+		UserDTO userDto = new UserDTO();
+		userDto.setLoginId(user.getLoginId());
+		userDto.setName(user.getName());
+		userDto.setNickname(user.getNickname());
+		userDto.setGender(user.getGender());
+		userDto.setAge(user.getAge());
+
+		return userDto;
 	}
 
 }
