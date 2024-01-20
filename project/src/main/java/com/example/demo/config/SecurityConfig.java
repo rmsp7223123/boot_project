@@ -40,7 +40,9 @@ public class SecurityConfig {
 						"scss/mixins/**", "scss/utilities/**", "scss/vendor/**", "utilities/**", "vendor/**")
 				.permitAll().anyRequest().authenticated().and().formLogin().loginPage("/")
 				.loginProcessingUrl("/login_process").successHandler(new LoginSuccessHandler(userService))
-				.failureHandler(new LoginFailureHandler()).and().httpBasic();
+				.failureHandler(new LoginFailureHandler()).and().logout().logoutUrl("/logout_process")
+				.invalidateHttpSession(true).logoutSuccessHandler(new LogoutSuccessHandler())
+				.deleteCookies("JSESSIONID");
 
 		return http.build();
 	}

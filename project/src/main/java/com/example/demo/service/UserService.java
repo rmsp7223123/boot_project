@@ -94,27 +94,27 @@ public class UserService implements UserDetailsService {
 				.orElseThrow(() -> new UsernameNotFoundException("해당 유저를 찾지 못했습니다."));
 	}
 
-	public UserDTO getAuthenticatedUser() {
-		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-		if (authentication == null) {
-			return null;
-		}
-		String username = authentication.getName();
-		Optional<Users> userOptional = userRepository.findByLoginId(username);
-		if (!userOptional.isPresent()) {
-			return null;
-		}
-
-		Users user = userOptional.get();
-
-		UserDTO userDto = new UserDTO();
-		userDto.setLoginId(user.getLoginId());
-		userDto.setName(user.getName());
-		userDto.setNickname(user.getNickname());
-		userDto.setGender(user.getGender());
-		userDto.setAge(user.getAge());
-
-		return userDto;
-	}
+//	public UserDTO getAuthenticatedUser() {
+//		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+//		if (authentication == null) {
+//			return null;
+//		}
+//		String username = authentication.getName();
+//		Optional<Users> userOptional = userRepository.findByLoginId(username);
+//		if (!userOptional.isPresent()) {
+//			return null;
+//		}
+//
+//		Users user = userOptional.get();
+//
+//		UserDTO userDto = new UserDTO();
+//		userDto.setLoginId(user.getLoginId());
+//		userDto.setName(user.getName());
+//		userDto.setNickname(user.getNickname());
+//		userDto.setGender(user.getGender());
+//		userDto.setAge(user.getAge());
+//
+//		return userDto;
+//	}
 
 }

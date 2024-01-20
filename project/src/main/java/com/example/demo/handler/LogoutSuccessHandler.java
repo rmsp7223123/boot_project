@@ -17,7 +17,7 @@ public class LogoutSuccessHandler
 			throws IOException, ServletException {
 		response.setContentType("text/html");
 		PrintWriter pw = response.getWriter();
-		pw.println("<script>alert('로그아웃 되었습니다.'); location.href='/';</script>");
+		pw.println("<script>location.href='/';</script>");
 		pw.flush();
 	}
 
