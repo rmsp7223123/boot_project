@@ -173,17 +173,15 @@
 								aria-labelledby="userDropdown">
 								<a class="dropdown-item" href="#"> <i
 									class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i> 프로필
-								</a> <a class="dropdown-item" href="#"> <i
+								</a> <a class="dropdown-item"  th:href="@{/users/changeInfo}"> <i
 									class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i> 회원정보 수정
 								</a>
 								<div class="dropdown-divider"></div>
-								<form th:action="@{/logout_process}" method="post">
-									<button type="submit" class="dropdown-item" data-toggle="modal"
-										data-target="#logoutModal">
-										<i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-										로그아웃
-									</button>
-								</form>
+								<a class="dropdown-item" href="#" data-toggle="modal"
+									data-target="#logoutModal"> <i
+									class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+									Logout
+								</a>
 							</div></li>
 
 					</ul>
@@ -220,6 +218,30 @@
 
 	<!-- Logout Modal-->
 	<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog"
-		aria-labelledby="exampleModalLabel"></div>
+		aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">로그아웃</h5>
+					<button class="close" type="button" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">×</span>
+					</button>
+				</div>
+				<div class="modal-body">로그아웃 하시겠습니까?</div>
+				<div class="modal-footer">
+					<button class="btn btn-secondary" type="button"
+						data-dismiss="modal">취소</button>
+					<form th:action="@{/logout_process}" method="post">
+						<button type="submit" class="btn btn-primary" data-toggle="modal"
+							data-target="#logoutModal">
+							<i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+							로그아웃
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 </html>

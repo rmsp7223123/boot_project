@@ -44,6 +44,11 @@ public class UsersController {
 		return "home";
 	}
 
+	@RequestMapping("/changeInfo")
+	public String changeInfo() { // 개인정보 변경 페이지로 이동
+		return "user/changeInfo";
+	}
+
 //	@RequestMapping("/login")
 //	public ResponseEntity<String> doLogin(@RequestParam("loginId") String loginId,
 //			@RequestParam("password") String password, HttpSession session) {// 로그인
@@ -65,7 +70,7 @@ public class UsersController {
 
 	@RequestMapping("/register")
 	public String register() { // 회원가입 이동
-		return "login/register";
+		return "user/register";
 	}
 
 	@PostMapping("/signup")
@@ -101,7 +106,7 @@ public class UsersController {
 
 	@RequestMapping("/findPassword")
 	public String findPassword() { // 비밀번호 찾기 화면 이동
-		return "login/findPassword";
+		return "user/findPassword";
 	}
 
 	@RequestMapping("/passwordRecovery")
