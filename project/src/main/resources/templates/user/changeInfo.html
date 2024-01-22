@@ -4,5 +4,167 @@
 </head>
 <body class="bg-gradient-primary">
 	<div th:insert="~{bodyTemplate :: bodyTemplate}"></div>
+	<div class="container">
+		<div class="card o-hidden border-0 shadow-lg my-5">
+			<div class="card-body p-0">
+				<div class="d-flex justify-content-center">
+					<div class="col-lg-10">
+						<div class="p-5">
+							<div class="text-center">
+								<h1 class="h4 text-gray-900 mb-4">회원가입</h1>
+							</div>
+							<form class="user" th:action="@{/users/signup}" method="post">
+								<div class="form-group row">
+									<div class="col-sm-6 mb-3 mb-sm-0">
+										<input type="text" class="form-control form-control-user"
+											id="id" placeholder="아이디를 입력해주세요(최대 10자, 영문과 숫자만 입력가능)"
+											name="loginId" maxlength="10" onchange="checkId()"
+											pattern="[A-Za-z0-9]+" autocomplete="off"><span
+											id="messageId"></span>
+									</div>
+									<div class="col-sm-6">
+										<input type="number" class="form-control form-control-user"
+											id="age" placeholder="Age" name="age" min="1" max="100"
+											autocomplete="off">
+									</div>
+								</div>
+								<div class="form-group row">
+									<div class="col-sm-6 mb-3 mb-sm-0">
+										<input type="password" class="form-control form-control-user"
+											id="inputPassword" placeholder="비밀번호를 입력해주세요(최대 10자)"
+											name="password" maxlength="10">
+									</div>
+									<div class="col-sm-6">
+										<input type="password" class="form-control form-control-user"
+											id="repeatPassword" placeholder="비밀번호를 재입력해주세요"
+											name="passwordCheck" maxlength="10"> <span
+											id="messagePw"></span>
+									</div>
+								</div>
+								<div class="form-group row">
+									<div class="col-sm-6 mb-3 mb-sm-0">
+										<input type="text" class="form-control form-control-user"
+											id="name" placeholder="이름" name="name" autocomplete="off">
+									</div>
+									<div class="col-sm-6">
+										<input type="text" class="form-control form-control-user"
+											id="nickname" placeholder="닉네임" name="nickname"
+											onchange="checkNickname()" autocomplete="off"> <span
+											id="messageNickname"></span>
+									</div>
+								</div>
+								<div class="form-group row">
+									<div class="col-sm-6 mb-3 mb-sm-0">
+										<div class="form-check form-check-inline">
+											<input class="form-check-input" type="radio" name="gender"
+												id="genderMale" value="male" checked> <label
+												class="form-check-label" for="genderMale">남성</label>
+										</div>
+										<div class="form-check form-check-inline">
+											<input class="form-check-input" type="radio" name="gender"
+												id="genderFemale" value="female"> <label
+												class="form-check-label" for="genderFemale">여성</label>
+										</div>
+									</div>
+								</div>
+								<button type="submit" class="btn btn-primary btn-user btn-block">회원가입</button>
+							</form>
+							<hr>
+							<div class="text-center">
+								<a class="small" th:href="@{/users/findPassword}">비밀번호를
+									잊어버리셨나요?</a>
+							</div>
+							<div class="text-center">
+								<a class="small" th:href="@{/}">로그인 화면으로 이동</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<script>
+		var pw = document.getElementById("inputPassword");
+		var pwCheck = document.getElementById("repeatPassword");
+		var message = document.getElementById("messagePw");
+		var messageId = document.getElementById("messageId");
+		var messageNickname = document.getElementById("messageNickname");
+		pw.onkeyup = validatePassword;
+		pwCheck.onkeyup = validatePassword;
+		function validatePassword() {
+			if (pw.value == "" && pwCheck.value == "") {
+				message.innerHTML = "";
+			} else if (pw.value == pwCheck.value) {
+				message.innerHTML = "비밀번호가 일치합니다.";
+				message.style.color = "green";
+			} else {
+				message.innerHTML = "비밀번호가 일치하지 않습니다.";
+				message.style.color = "red";
+			}
+		}
+		function checkId() {
+		    var inputed = $('#id').val();
+		    $.ajax({
+		        type: "GET",
+		        url: "/users/checkId",
+		        data: {"mId" : inputed},
+		        success: function(data) {
+		            if (data == 1) {
+		                messageId.innerHTML = "이미 존재하는 아이디입니다.";
+		                messageId.style.color = "red";
+		            } else {
+		            	messageId.innerHTML = "사용 가능한 아이디입니다.";
+		            	messageId.style.color = "green";
+		            }
+		        }
+		    });
+		}
+		function checkNickname() {
+		    var inputed = $('#nickname').val();
+		    $.ajax({
+		        type: "GET",
+		        url: "/users/checkNickname",
+		        data: {"mNickname" : inputed},
+		        success: function(data) {
+		            if (data == 1) {
+		                messageNickname.innerHTML = "이미 존재하는 닉네임입니다.";
+		                messageNickname.style.color = "red";
+		            } else {
+		            	messageNickname.innerHTML = "사용 가능한 닉네임입니다.";
+		            	messageNickname.style.color = "green";
+		            }
+		        }
+		    });
+		}
+		document.querySelector('.user').addEventListener(
+				'submit',
+				function(e) {
+					var id = document.getElementById('id').value;
+					var age = document.getElementById('age').value;
+					var name = document.getElementById('name').value;
+					var nickname = document.getElementById('nickname').value;
+					var inputPassword = document.getElementById('inputPassword').value;
+				    var repeatPassword = document.getElementById('repeatPassword').value;
+				    if (!id || !age || !inputPassword || !repeatPassword || !name || !nickname) {
+				        alert('모든 필드를 채워주세요.');
+				        e.preventDefault();
+				      } else if(age <= 0 || age > 100){
+				        alert('나이에 0이하의 값이나 100이상의 값은 입력할 수 없습니다.');
+				        e.preventDefault();
+				      } else if (inputPassword !== repeatPassword) {
+				        alert('비밀번호가 일치하지 않습니다.');
+				        e.preventDefault(); // 폼 제출 막기
+				      } else if (messageId.innerHTML == "이미 존재하는 아이디입니다.") {
+				        alert('아이디를 다시 확인해주세요.');
+				        e.preventDefault();
+				      } else if(messageNickname.innerHTML == "이미 존재하는 닉네임입니다.") {
+				        alert('닉네임을 다시 확인해주세요.');
+					    e.preventDefault();
+				      } else {
+				    	  alert('축하합니다! 회원가입이 성공적으로 이루어졌습니다.');
+				      }
+				});
+	</script>
 </body>
 </html>
