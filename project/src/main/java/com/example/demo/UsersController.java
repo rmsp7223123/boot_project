@@ -48,6 +48,11 @@ public class UsersController {
 	public String changeInfo() { // 개인정보 변경 페이지로 이동
 		return "user/changeInfo";
 	}
+	
+	@RequestMapping("/updateInfo")
+	public void updateInfo() { // 개인정보 변경
+		
+	}
 
 //	@RequestMapping("/login")
 //	public ResponseEntity<String> doLogin(@RequestParam("loginId") String loginId,
