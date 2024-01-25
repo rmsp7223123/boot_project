@@ -54,20 +54,6 @@ public class UsersController {
 		
 	}
 
-//	@RequestMapping("/login")
-//	public ResponseEntity<String> doLogin(@RequestParam("loginId") String loginId,
-//			@RequestParam("password") String password, HttpSession session) {// 로그인
-//		Optional<Users> userOptional = userRepository.findByLoginId(loginId);
-//		if (userOptional.isPresent()) {
-//			Users user = userOptional.get();
-//			if (user.getLoginId().equals(loginId) && passwordEncoder.matches(password, user.getPassword())) {
-//				session.setAttribute("user", user);
-//				return ResponseEntity.ok("success");
-//			}
-//		}
-//		return ResponseEntity.ok("fail");
-//	}
-
 	@GetMapping("/logout")
 	public String logout() { // 로그아웃
 		return "redirect:/";
