@@ -50,7 +50,8 @@ public class UsersController {
 	}
 	
 	@RequestMapping("/updateInfo")
-	public void updateInfo() { // 개인정보 변경
+	public String updateInfo() { // 개인정보 변경
+		return "home";
 		
 	}
 
