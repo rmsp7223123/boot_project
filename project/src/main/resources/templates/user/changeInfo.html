@@ -17,9 +17,9 @@
 								<div class="form-group row">
 									<div class="col-sm-6 mb-3 mb-sm-0">
 										<input type="text" class="form-control form-control-user"
-											id="id" placeholder="기존 아이디 + 입력 못하게"
+											id="id" placeholder="기존 아이디 + 입력 못하게" th:value = ${session.user.nickname}
 											name="loginId" maxlength="10" onchange="checkId()"
-											pattern="[A-Za-z0-9]+" autocomplete="off"><span
+											pattern="[A-Za-z0-9]+" autocomplete="off" readonly><span
 											id="messageId"></span>
 									</div>
 									<div class="col-sm-6">
