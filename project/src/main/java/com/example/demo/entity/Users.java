@@ -50,5 +50,13 @@ public class Users {
 		this.age = age;
 		this.isAdmin = isAdmin;
 	}
+	
+	public void update(Users updateUser) {
+		this.password = updateUser.password;
+		this.name = updateUser.name;
+		this.nickname = updateUser.nickname;
+		this.gender = updateUser.gender;
+		this.age = updateUser.age;
+	}
 
 }

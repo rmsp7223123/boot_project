@@ -50,9 +50,11 @@ public class UsersController {
 	}
 	
 	@RequestMapping("/updateInfo")
-	public String updateInfo() { // 개인정보 변경
+	public String updateInfo(@ModelAttribute Users updatedUser, HttpSession session) { // 개인정보 변경
+		Users currentUser = (Users) session.getAttribute("user");
+		currentUser.update(updatedUser);
+		userRepository.save(currentUser);
 		return "home";
-		
 	}
 
 	@GetMapping("/logout")
