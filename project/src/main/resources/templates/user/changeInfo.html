@@ -17,10 +17,10 @@
 								<div class="form-group row">
 									<div class="col-sm-6 mb-3 mb-sm-0">
 										<input type="text" class="form-control form-control-user"
-											id="id" placeholder="기존 아이디 + 입력 못하게" th:value = ${session.user.nickname}
-											name="loginId" maxlength="10" onchange="checkId()"
-											pattern="[A-Za-z0-9]+" autocomplete="off" readonly><span
-											id="messageId"></span>
+											id="id" placeholder="기존 아이디 + 입력 못하게"
+											th:value=${session.user.nickname} name="loginId"
+											maxlength="10" onchange="checkId()" pattern="[A-Za-z0-9]+"
+											autocomplete="off" readonly><span id="messageId"></span>
 									</div>
 									<div class="col-sm-6">
 										<input type="number" class="form-control form-control-user"
@@ -68,7 +68,8 @@
 									</div>
 								</div>
 								<button type="submit" class="btn btn-primary btn-user btn-block">수정</button>
-								<button type="button" class="btn btn-user btn-block">취소</button>
+								<button type="button" class="btn btn-user btn-block"
+									onclick="goBack()">취소</button>
 							</form>
 							<hr>
 							<div class="text-center">
@@ -166,6 +167,9 @@
 				    	  alert('개인정보가 변경되었습니다.');
 				      }
 				});
+		function goBack() {
+			  window.history.back();
+			}
 	</script>
 </body>
 </html>

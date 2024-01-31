@@ -54,7 +54,7 @@ public class UsersController {
 		Users currentUser = (Users) session.getAttribute("user");
 		currentUser.update(updatedUser);
 		userRepository.save(currentUser);
-		return "home";
+		return "redirect:/users/home";
 	}
 
 	@GetMapping("/logout")
