@@ -49,7 +49,7 @@ public class UsersController {
 		return "user/changeInfo";
 	}
 	
-	@RequestMapping("/updateInfo")
+	@PostMapping("/updateInfo")
 	public String updateInfo(@ModelAttribute Users updatedUser, HttpSession session) { // 개인정보 변경
 		Users currentUser = (Users) session.getAttribute("user");
 		currentUser.update(updatedUser);
