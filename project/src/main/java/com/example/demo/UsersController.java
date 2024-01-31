@@ -48,7 +48,7 @@ public class UsersController {
 	public String changeInfo() { // 개인정보 변경 페이지로 이동
 		return "user/changeInfo";
 	}
-	
+
 	@PostMapping("/updateInfo")
 	public String updateInfo(@ModelAttribute Users updatedUser, HttpSession session) { // 개인정보 변경
 		Users currentUser = (Users) session.getAttribute("user");
