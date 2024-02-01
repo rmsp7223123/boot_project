@@ -50,7 +50,9 @@ public class UsersController {
 	}
 
 	@PostMapping("/updateInfo")
-	public String updateInfo(@ModelAttribute Users updatedUser, HttpSession session) { // 개인정보 변경
+	public String updateInfo(@ModelAttribute Users updatedUser, @RequestParam(defaultValue = "false") Boolean isAdmin,
+			HttpSession session) { // 개인정보 변경
+		updatedUser.setIsAdmin(isAdmin);
 		Users currentUser = (Users) session.getAttribute("user");
 		currentUser.update(updatedUser);
 		userRepository.save(currentUser);

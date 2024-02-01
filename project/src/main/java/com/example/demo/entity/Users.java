@@ -1,5 +1,11 @@
 package com.example.demo.entity;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+
+import com.example.demo.config.BCryptConfig;
+
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -36,7 +42,15 @@ public class Users {
 
 	private int age;
 
-	private boolean isAdmin;
+	@Column(columnDefinition = "NUMBER(1,0)")
+	private Boolean isAdmin;
+	// boolean
+	// 기본형 ( primitive type ) , 메모리에 직접 값을 저장
+	// null을 담을 수 없으며 true,false만
+	
+	// Boolean
+	// 참조형 ( reference type ) , 참조값 ( 주소 ) 을 가진다.
+	// null을 담을 수 있음
 
 	@Builder
 	public Users(Long Id, String loginId, String password, String name, String nickname, String gender, int age,
@@ -52,12 +66,15 @@ public class Users {
 	}
 
 	public void update(Users updateUser) {
+		
 		this.password = updateUser.password;
 		this.name = updateUser.name;
 		this.nickname = updateUser.nickname;
 		this.gender = updateUser.gender;
 		this.age = updateUser.age;
-		this.isAdmin = updateUser.isAdmin;
+		if(updateUser.isAdmin != null) {
+	        this.isAdmin = updateUser.isAdmin;
+	    }
 	}
 
 }

@@ -81,7 +81,7 @@ public class UserService implements UserDetailsService {
 			throw new UsernameNotFoundException("해당 유저를 찾지 못했습니다.");
 		}
 		List<SimpleGrantedAuthority> authorities = new ArrayList<>();
-		if (user.get().isAdmin()) {
+		if (user.get().getIsAdmin()) {
 			authorities.add(new SimpleGrantedAuthority("ROLE_ADMIN"));
 		} else {
 			authorities.add(new SimpleGrantedAuthority("ROLE_USER"));
