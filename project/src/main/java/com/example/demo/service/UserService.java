@@ -93,6 +93,11 @@ public class UserService implements UserDetailsService {
 		return userRepository.findByLoginId(loginId)
 				.orElseThrow(() -> new UsernameNotFoundException("해당 유저를 찾지 못했습니다."));
 	}
+	
+	public void updateUser(Users user) {
+		user.setPassword(encoder.encode(user.getPassword()));
+		userRepository.save(user);
+	}
 
 //	public UserDTO getAuthenticatedUser() {
 //		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();

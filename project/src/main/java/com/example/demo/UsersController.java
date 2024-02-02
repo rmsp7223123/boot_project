@@ -55,7 +55,7 @@ public class UsersController {
 		updatedUser.setIsAdmin(isAdmin);
 		Users currentUser = (Users) session.getAttribute("user");
 		currentUser.update(updatedUser);
-		userRepository.save(currentUser);
+		userService.updateUser(currentUser);
 		return "redirect:/users/home";
 	}
 
