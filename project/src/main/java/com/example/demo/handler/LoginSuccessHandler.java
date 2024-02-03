@@ -52,8 +52,10 @@ public class LoginSuccessHandler implements AuthenticationSuccessHandler {
 		response.setContentType("text/html"); // 응답의 컨텐츠 타입을 HTML로 설정
 		PrintWriter pw = response.getWriter(); // 응답에 쓸 PrintWriter 객체
 		if (loginUser.getIsAdmin() == true) {
+			session.setAttribute("toastMessage", "관리자로 로그인되었습니다.");
 			pw.println("<script>alert('관리자로 로그인되었습니다.'); window.location.href='/users/home';</script>");
 		} else {
+			session.setAttribute("toastMessage", "관리자로 로그인되었습니다.");
 			pw.println("<script>alert('" + loginUser.getNickname()
 					+ "님 반갑습니다.'); window.location.href='/users/home';</script>");
 		}
