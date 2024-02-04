@@ -245,14 +245,17 @@
 	</div>
 	<script>
 		$(document).ready(function() {
-			var nickname = '${nickname}';
-			toastr.options = {
-				"closeButton" : true,
-				"progressBar" : true,
-				"positionClass" : "toast-top-right",
-				"timeOut" : "2000"
-			};
-			toastr.success(nickname + '님, 환영합니다!');
+			var nickname = '[[${nickname}]]';
+			var loginSuccess = '[[${loginSuccess}]]';
+			if (loginSuccess === 'true') {
+				toastr.options = {
+					"closeButton" : true,
+					"progressBar" : true,
+					"positionClass" : "toast-top-right",
+					"timeOut" : "2000"
+				};
+				toastr.success(nickname + '님, 환영합니다!');
+			}
 		});
 	</script>
 </body>

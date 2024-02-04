@@ -47,6 +47,7 @@ public class LoginSuccessHandler implements AuthenticationSuccessHandler {
 		}
 		Authentication auth = new UsernamePasswordAuthenticationToken(loginUser, null, authorities);
 		session.setAttribute("user", loginUser);
+		session.setAttribute("loginSuccess", true);
 		SecurityContextHolder.getContext().setAuthentication(auth);
 
 		response.setContentType("text/html"); // 응답의 컨텐츠 타입을 HTML로 설정

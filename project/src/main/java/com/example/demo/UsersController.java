@@ -46,6 +46,15 @@ public class UsersController {
 	    HttpSession session = request.getSession();
 	    Users loginUser = (Users) session.getAttribute("user");
 	    model.addAttribute("nickname", loginUser.getNickname());
+	    
+	    Boolean loginSuccess = (Boolean) session.getAttribute("loginSuccess");
+	    if (loginSuccess != null && loginSuccess) {
+	        model.addAttribute("loginSuccess", true);
+	        session.removeAttribute("loginSuccess");
+	    } else {
+	        model.addAttribute("loginSuccess", false);
+	    }
+	    
 	    return "home";
 	}
 
