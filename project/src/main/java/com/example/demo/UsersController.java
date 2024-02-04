@@ -9,6 +9,7 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import org.springframework.validation.annotation.Validated;
@@ -25,6 +26,7 @@ import com.example.demo.handler.LoginSuccessHandler;
 import com.example.demo.repository.UsersRepository;
 import com.example.demo.service.UserService;
 
+import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 
@@ -40,8 +42,11 @@ public class UsersController {
 	private final BCryptPasswordEncoder passwordEncoder;
 
 	@RequestMapping("/home")
-	public String home() { // 로그인 후 홈화면 이동
-		return "home";
+	public String home(Model model, HttpServletRequest request) { // 로그인 후 홈화면 이동
+	    HttpSession session = request.getSession();
+	    Users loginUser = (Users) session.getAttribute("user");
+	    model.addAttribute("nickname", loginUser.getNickname());
+	    return "home";
 	}
 
 	@RequestMapping("/changeInfo")

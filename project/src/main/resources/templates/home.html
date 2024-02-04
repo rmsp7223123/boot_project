@@ -173,7 +173,7 @@
 								aria-labelledby="userDropdown">
 								<a class="dropdown-item" href="#"> <i
 									class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i> 프로필
-								</a> <a class="dropdown-item"  th:href="@{/users/changeInfo}"> <i
+								</a> <a class="dropdown-item" th:href="@{/users/changeInfo}"> <i
 									class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i> 회원정보 수정
 								</a>
 								<div class="dropdown-divider"></div>
@@ -243,5 +243,17 @@
 			</div>
 		</div>
 	</div>
+	<script>
+		$(document).ready(function() {
+			var nickname = '${nickname}';
+			toastr.options = {
+				"closeButton" : true,
+				"progressBar" : true,
+				"positionClass" : "toast-top-right",
+				"timeOut" : "2000"
+			};
+			toastr.success(nickname + '님, 환영합니다!');
+		});
+	</script>
 </body>
 </html>
