@@ -56,7 +56,13 @@
 			var loginId = document.getElementById('loginId').value;
 			var password = document.getElementById('password').value;
 			if (loginId == "" || password == "") {
-				alert("아이디와 비밀번호를 입력해주세요.");
+				toastr.options = {
+						"closeButton" : true,
+						"progressBar" : true,
+						"positionClass" : "toast-top-right",
+						"timeOut" : "2000"
+					};
+					toastr.success("아이디와 비밀번호를 입력해주세요.");
 				return false;
 			}
 			return true;
