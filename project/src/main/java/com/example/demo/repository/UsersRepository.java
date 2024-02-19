@@ -18,11 +18,11 @@ public interface UsersRepository extends JpaRepository<Users, Long> {
 	// Optional<Users>는 조회 결과가 없을 경우 null 대신에 Optional.empty()를 반환하므로,
 	// NullPointerException을 방지하는 안전한 코드 작성
 	Optional<Users> findByNickname(String nickname);
-
+ 
 	Optional<Users> findByLoginIdAndName(String loginId, String name);
 	
 	Optional<Users> findByLoginIdAndPassword(String loginId, String password);
-
+ 
 	Boolean existsByLoginId(String loginId);
   
 	Boolean existsByNickname(String nickname);	
