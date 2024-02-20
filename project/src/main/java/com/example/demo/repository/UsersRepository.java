@@ -20,7 +20,7 @@ public interface UsersRepository extends JpaRepository<Users, Long> {
 	Optional<Users> findByNickname(String nickname);
  
 	Optional<Users> findByLoginIdAndName(String loginId, String name);
-	
+	 
 	Optional<Users> findByLoginIdAndPassword(String loginId, String password);
  
 	Boolean existsByLoginId(String loginId);
